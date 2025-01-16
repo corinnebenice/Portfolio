@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+
+<head>
+    <title>Nikki's Design Portfolio</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ----------------------- REGULAR ---------------------- */
+        body {
+            position: relative;
+            width: 100%;
+            margin: 0;
+        }
+
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-radius: 20px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #4e4e4e;
+            border-radius: 50px;
+        }
+
+        body {
+            /* align-items: stretch; */
+            height: 100%;
+            /* background-color: #000;
+            color: #00ff00; */
+            background-color: #ffffff;
+            color: #5e5e5e;
+            /* font-family: "Inter", serif; */
+            font-size: 15px;
+            /* font-family: "Manrope", serif; */
+            font-family: "Lora", serif;
+            font-style: normal;
+            min-height: 100vh;
+        }
+
+        #menucontainer {
+            /* width: 100%; */
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        #content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            min-height: 70vh;
+            padding-bottom: 200px;
+        }
+
+        #menu {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: right;
+            flex-grow: 0.5;
+            margin-right: 20px;
+            font-family: "Lora", serif;
+            /* justify-content: right; */
+            /* flex-grow: 0.5; */
+            /* align-items: right; */
+        }
+
+        .title {
+            /* display: flex; */
+            font-size: 20px;
+            /* font-family: "Inter", serif; */
+            font-family: "Lora", serif;
+            /* padding-left: 20px; */
+            flex-grow: 0.5;
+            font-weight: 600;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        #title {
+            /* display: flex; */
+            font-size: 20px;
+            /* font-family: "Inter", serif; */
+            font-family: "Lora", serif;
+            padding-left: 20px;
+            flex-grow: 0.5;
+            font-weight: 700;
+        }
+
+        #title:hover~#imageme {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #imgnikki {
+            position: absolute;
+            top: 8vh;
+            left: 2vh;
+        }
+
+        .title_smaller {
+            font-family: "Lora", serif;
+            /* font-family: "Inter", serif; */
+            font-size: 15px;
+            /* display: flex; */
+            padding-left: 20px;
+            flex-grow: 0.5;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-family: "Lora", serif;
+            /* font-family: "Inter", serif; */
+            font-size: 15px;
+            font-weight: 300;
+            margin-bottom: -10px;
+        }
+
+        .normaltext {
+            font-family: "Inter", serif;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+
+        .small_text {
+            font-family: "Inter", serif;
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        #pastbox1,#pastbox2,
+        #filesbox,
+        #aboutmebox {
+            display: flex;
+            width: 50%;
+            max-width: 700px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+
+        button {
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            font-family: "Inter", serif;
+            /* font-family: "Lora", serif; */
+            font-size: 15px;
+            border: 0px solid #00ff00;
+            background-color: #ffffff;
+            color: #4e4e4e;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #383838;
+            color: #ffffff;
+        }
+
+        /* ----------------------- BANNER ---------------------- */
+
+        #bannertext {
+            padding: 15px;
+            margin: 0;
+        }
+
+        #banner {
+            background-color: #c9c9c9;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        /* ----------------------- ABOUT ME ---------------------- */
+
+        #titleidentity {
+            margin-top: 100px;
+        }
+
+        #titlereferences {
+            width: 100%;
+            margin-top: 120px;
+        }
+
+        #textreferences {
+            font-size: 14px;
+        }
+
+        #textidentity:hover~#imgidentity {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+
+        #imgbuild {
+            position: absolute;
+            top: 150%;
+            left: 20%;
+        }
+
+        #imgelf {
+            position: absolute;
+            top: 110%;
+            left: 170%;
+        }
+
+
+        /* ----------------------- DEVELOPMENT ---------------------- */
+
+        #textpast {
+            flex-grow: 1;
+            font-family: "Inter", serif;
+        }
+
+        #expertiseareas {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        #titlepresent {
+            margin-top: 100px;
+        }
+
+        #titlefuture {
+            margin-top: 50px;
+        }
+
+        #imgprocess {
+            /* position: absolute; */
+            /* justify-items: center; */
+            /* top: 70%; */
+            width: 80%;
+            /* height: 20%; */
+        }
+
+        #processdiv {
+            align-content: center;
+            /* position: relative; */
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        #pastbox1,#pastbox2, #processdiv {
+            flex-grow: 1;
+        }
+
+        /* ----------------------- FILES ---------------------- */
+
+        .filelinks {
+            font-family: "Inter", serif;
+            font-size: 15px;
+            font-weight: 300;
+            text-decoration: none;
+            color: #383838;
+            margin-top: 5px;
+        }
+
+        .filelinks:hover {
+            background-color: #383838;
+            color: #ffffff;
+        }
+
+        #titlesources {
+            margin-top: 100px;
+        }
+
+        #filesbox {
+            align-items: flex-end;
+            margin-left: 70vb;
+        }
+
+
+        /* ----------------------- PROJECTS ---------------------- */
+
+        #projectsbox {
+            display: flex;
+            width: 60%;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 200px;
+        }
+
+        #titleprojects {
+            margin-top: 100px;
+            flex-grow: 1;
+        }
+
+        .projectcontent {
+            font-size: 15px;
+            font-weight: 300;
+            display: flex;
+            margin: 30px;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .projectlist {
+            width: 100%;
+            height: 70px;
+            flex-grow: 1;
+            margin: 0;
+            margin-top: -2px;
+            padding-left: 20px;
+            align-content: center;
+            z-index: 10;
+        }
+
+        .projectlist:hover {
+            margin-top: -2px;
+            background-color: #4e4e4e;
+            color: #ffffff;
+        }
+
+        #project1:hover~#p1 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project2:hover~#p2 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project3:hover~#p3 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project4:hover~#p4 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project5:hover~#p5 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project6:hover~#p6 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project7:hover~#p7 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project8:hover~#p8 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project9:hover~#p9 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project10:hover~#p10 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project11:hover~#p11 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        #project12:hover~#p12 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+            /* Smooth transition */
+        }
+
+        .hoverpages {
+            visibility: hidden;
+            display: block;
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100vh;
+            height: 100vh;
+            z-index: -1;
+            transition: opacity 0.3s ease, visibility 0s 0.3s;
+        }
+
+        #img1 {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+        }
+
+        #img2 {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+
+        #img3 {
+            position: absolute;
+            top: 16%;
+            left: 80%;
+        }
+
+        #img4 {
+            position: absolute;
+            top: 60%;
+            left: 75%;
+        }
+
+        #img5 {
+            position: absolute;
+            top: 60%;
+            left: 75%;
+        }
+
+        #img6 {
+            position: absolute;
+            top: 60%;
+            left: 75%;
+        }
+
+        #img7 {
+            position: absolute;
+            top: 60%;
+            left: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menucontainer">
+        <h1 id="title" class="title">Nikki's Design Portfolio</h1>
+        <div id="imageme" class="hoverpages">
+            <img id="imgnikki" src="Nikki.png" width="200px">
+        </div>
+        <div id="menu">
+            <button class="menu" id="button0" onclick="home()">HOME</button>
+            <button class="menu" id="button1" onclick="aboutme()">ABOUT ME</button>
+            <button class="menu" id="button2" onclick="past()">DEVELOPMENT</button>
+            <button class="menu" id="button3" onclick="projects()">MY WORK</button>
+            <button class="menu" id="button3" onclick="files()">FILES AND REFERENCES</button>
+        </div>
+
+        <div></div>
+    </div>
+
+    <div id="content">
+
+        <div id="homebox" style="display: none;">
+            <p id="titlehome" class="title">Welcome to my portfolio!</p>
+        </div>
+
+        <div id="projectsbox" style="display: none;">
+            <h1 id="titleprojects" class="title">Projects</h1>
+
+            <h1 id="project1" class="projectlist title_smaller">Final Master Project - Spiritual Technology: Designing
+                Space for Spirituality in the Everyday</h1>
+            <div id="p1" class="hoverpages">
+                <img id="img1" src="FMP1.JPG" width="200px">
+                <img id="img2" src="FMP2.JPG" width="300px">
+                <img id="img3" src="FMP3.JPG" width="300px">
+                <img id="img4" src="FMP4.JPG" width="250px">
+            </div>
+
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project2" class="projectlist title_smaller">Data Enabled Design</h3>
+            <div id="p2" class="hoverpages">
+                <embed id="img5" src="DED1.pdf" type="application/pdf" width="200px" />
+                <embed id="img6" src="DED2.pdf" type="application/pdf" width="200px" />
+                <embed id="img7" src="DED3.pdf" type="application/pdf" width="200px" />
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project4" class="projectlist title_smaller">Matters of Transformation</h3>
+            <div id="p3" class="hoverpages">
+                <img id="img1a" src="FMP1.JPG" width="200px">
+                <img id="img2a" src="FMP2.JPG" width="300px">
+                <img id="img3a" src="FMP3.JPG" width="300px">
+                <img id="img4a" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project3" class="projectlist title_smaller">M2.1 - CLEVER°FRANKE</h3>
+            <div id="p4" class="hoverpages">
+                <img id="img1b" src="FMP1.JPG" width="200px">
+                <img id="img2b" src="FMP2.JPG" width="300px">
+                <img id="img3b" src="FMP3.JPG" width="300px">
+                <img id="img4b" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project5" class="projectlist title_smaller">Let's make Humans Better</h3>
+            <div id="p5" class="hoverpages">
+                <img id="img1c" src="FMP1.JPG" width="200px">
+                <img id="img2c" src="FMP2.JPG" width="300px">
+                <img id="img3c" src="FMP3.JPG" width="300px">
+                <img id="img4c" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project6" class="projectlist title_smaller">M1.2 - On the future of Dataism</h3>
+            <div id="p6" class="hoverpages">
+                <img id="img1d" src="FMP1.JPG" width="200px">
+                <img id="img2d" src="FMP2.JPG" width="300px">
+                <img id="img3d" src="FMP3.JPG" width="300px">
+                <img id="img4d" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project7" class="projectlist title_smaller">M1.1 - Track.(ID)</h3>
+            <div id="p7" class="hoverpages">
+                <img id="img1e" src="FMP1.JPG" width="200px">
+                <img id="img2e" src="FMP2.JPG" width="300px">
+                <img id="img3e" src="FMP3.JPG" width="300px">
+                <img id="img4e" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project8" class="projectlist title_smaller">Interactional Morality</h3>
+            <div id="p8" class="hoverpages">
+                <img id="img1f" src="FMP1.JPG" width="200px">
+                <img id="img2f" src="FMP2.JPG" width="300px">
+                <img id="img3f" src="FMP3.JPG" width="300px">
+                <img id="img4f" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project9" class="projectlist title_smaller">Constructive Design Research</h3>
+            <div id="p9" class="hoverpages">
+                <img id="img1g" src="FMP1.JPG" width="200px">
+                <img id="img2g" src="FMP2.JPG" width="300px">
+                <img id="img3g" src="FMP3.JPG" width="300px">
+                <img id="img4g" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project10" class="projectlist title_smaller">Designerly Perspective on IoT</h3>
+            <div id="p10" class="hoverpages">
+                <img id="img1h" src="FMP1.JPG" width="200px">
+                <img id="img2h" src="FMP2.JPG" width="300px">
+                <img id="img3h" src="FMP3.JPG" width="300px">
+                <img id="img4h" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project11" class="projectlist title_smaller">Creativity and Aesthetics of Data and AI</h3>
+            <div id="p11" class="hoverpages">
+                <img id="img1i" src="FMP1.JPG" width="200px">
+                <img id="img2i" src="FMP2.JPG" width="300px">
+                <img id="img3i" src="FMP3.JPG" width="300px">
+                <img id="img4i" src="FMP4.JPG" width="250px">
+            </div>
+            <hr width="100%" style="margin: 0%;">
+            <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmelia Sensis</h3>
+            <div id="p2" class="hoverpages">
+                <img id="img1j" src="FMP1.JPG" width="200px">
+                <img id="img2j" src="FMP2.JPG" width="300px">
+                <img id="img3j" src="FMP3.JPG" width="300px">
+                <img id="img4j" src="FMP4.JPG" width="250px">
+            </div>
+
+            <h2 class="normaltext"></h2>
+        </div>
+
+        <div id="aboutmebox" style="display: none;">
+            <h1 id="titlevision" class="title">Vision</h1>
+            <div id="textvision" class="normaltext">
+                <p> In our world, more web pages, digital tools, algorithms, and data
+                    points are born than people. We need to learn to live together with this digital species (the
+                    ‘technology’ collective). We need to learn to collaborate, but in this, not forget our human
+                    strengths:
+                    we should let intuition and data collaborate. Going from probabilities to possibilities, from logic
+                    to
+                    wisdom, and let our algorithms and emotions collaborate.</p>
+                <p>I believe living in such a world is possible. However, it does require the necessary changes, of
+                    which
+                    most within our attitude and mind-set. Through our designer skills, creating experiences and
+                    artifacts,
+                    we invite our public into our ideas and visions. I want to allow ‘normal people’ to fantasize and
+                    dream,
+                    to dive deep into an engaging story and let their mind wander freely within that world. I believe
+                    this
+                    can be done through speculative design and design fiction. By closing the gap between reality and
+                    fiction, I want to allow people to dream and ‘think big’ again, to think of life as if we could
+                    change
+                    it. Just like I believe we actually can.</p>
+                <p>I believe to design is to be a pragmatist. Derived from the work of William James [X], some important
+                    theories of pragmatism are radical empiricism (the relation between things and the things themselves
+                    form an experience), pluralism (there is no one truth), anti-absolutism (there is no truth already
+                    ‘out
+                    there’ for us to discover), and habits of action (beliefs are not static but are put into action).
+                    In design work, this results in 3 core principles:</p>
+                <p>There should be equal emphasis on the things that actually are, as how we experience them.
+                    We should understand the temporality of life and embrace constant change; leave room for complexity
+                    and
+                    ambiguity, and keep questioning the things that we already think we understand.</p>
+                <p>Stay pragmatic, stay in the here and now; see actions and habits as mechanisms of the metaphysical,
+                    and
+                    act using the same language. Produce practical tools that play to our bodily experiences.</p>
+                <p>So, to talk about alternative positions of the future, we should tinker and experiment with what’s
+                    around us. Make it physical and experiential.</p>
+                <p>As a designer, I aim to leave room for wonder, magic, and spirituality in this world full of
+                    technology.
+                    I believe design is much more than ‘making’; it is ‘making things possible’ [X].</p>
+            </div>
+            <h1 id="titleidentity" class="title">Professional Identity</h1>
+            <div id="textidentity" class="normaltext">
+                <p>I am a sensitive data-designer that combines intuition and
+                    philosophy with data, technology & code, to speculate about alternative perspectives on the future
+                    everyday.</p>
+                <p> I grew up in a household of Ying and Yang. Where my mom would relief my stomach aches by ‘pulling it
+                    out’ with her hands and taught me that energies can be steered to manifest your desires, my dad
+                    would
+                    help me pick apart objects to figure out their internal workings and taught me that everything in
+                    life
+                    can be explained and everything lives in matter.</p>
+                <p> This has led to a duality that I have felt throughout my whole life. Where on the one side I am
+                    practical, analytical, and scientific, I on the other side love to get lost in mythical stories,
+                    highly
+                    value art and social practices, and partake in philosophical discussion. Being raised by parents
+                    that
+                    clearly embody both one of these characters, I have always felt that I had to choose between these
+                    two
+                    forms of being. But today I am starting to learn that we can combine the two, let them co-exist.</p>
+                <p>As a designer, I aspire to let intuition and rationale collaborate. Where can sensitivity and
+                    intuition
+                    be part of data analysis? How can code and data speak to emotions and become spiritual? I am now
+                    learning to see where they can be combined and empower each other, where the aesthetics of
+                    intelligence
+                    can be found [X].</p>
+                <p> In this, I use methodologies that strongly rely on Creativity and Aesthetics, and work with data and
+                    computing tools deriving from the Math, Data and Computing field. In my work as a designer, I aim to
+                    implement both powers through sensitivity and practicality; creating things with hardware, software,
+                    philosophy, and speculations. I aim to leave room for ambiguity and complexity, while providing
+                    concrete
+                    (technical) tools and products.</p>
+            </div>
+            <div id="imgidentity" class="hoverpages">
+                <img id="imgbuild" src="nikkibuild.JPG" width="400px">
+                <img id="imgelf" src="nikkielf.JPG" width="300px">
+            </div>
+
+            <h1 id="titlereferences" class="title centered">References</h1>
+            <div id="textreferences" class="normaltext centered">
+                <p><i>“I have worked with Nikki in her time as intern and as junior functionality designer at MMID. Both
+                        times she was part of projects I was leading. Nikki is a great team member to have, a competent
+                        and diverse designer. She has a keen eye to really understand the problem at hand, takes the
+                        extra effort to really understand what is the core of the challenge, and is not afraid to dive
+                        into new things. I was impressed by the speed with which she can familiarize herself with new
+                        skills and apply them in a useful manner. This with a good balance between autonomy and keeping
+                        in good contact with the team, client and project goals. Aside from all the professional
+                        feedback Nikki is just a fun person to work with as well, we have has many laughs together!”
+                    </i></p>
+                <p>Scott Hoekstra - Project leader R&D</p>
+            </div>
+
+        </div>
+
+        <div id="pastbox1" style="display: none;">
+            <h1 id="titlepast" class="title">Past</h1>
+            <p id="textpast" class="normaltext">Before my masters, I completed the bachelors of Industrial Design at
+                the TU/e as well.
+                During my bachelors, I did an <a href="javascript:imgproject1()">internship</a> at Design Agency MMID in
+                Delft [X]. In this internship, I was
+                looking explicitly to develop my hard skills and wanted to learn more about the ‘finalizing’ and end
+                stages of designing, something that I really missed in my education at the time. The internship could
+                very well provide me in this, however I learned that while very interesting, the skills and processes
+                closer to releasing a product were not the ones I felt like I should develop further in. I learned to
+                value the skills I developed at Eindhoven, which when talking about product development stage belong
+                more to the front-end, even more than I had before. Specifically, I am talking about critical thinking,
+                unraveling conceptual and contextual complexity, approaching design from a visionary and transforming
+                standpoint. Those were the attributes I had as a designer that made me stand out at MMID, and that made
+                me capable of adding something valuable to the projects there.
+
+                After my bachelors I continued to work at MMID, first part-time during my FBP and after graduating
+                full-time. In this experience, I liked the projects most where I could contribute conceptually and
+                visionary, working on the bigger picture of the project.
+                This is in the end why I ended up choosing to pursue my masters at the TU/e as well; I felt that those
+                things I valued most about my work were very ‘TU/e-style’, and I saw the infancy of it, feeling that I
+                could still learn so much on this topic in the masters ID.
+                Next to this, my experience of working in the industry reinforced my appreciation for the opportunities
+                the academic world provides. It allowed me to still focus on my personal development, work on projects
+                without financial or market interests, and left room for both deep and broad experimentation and
+                explorations.
+
+                This mentality is also seen back in my development focus within my masters. Throughout my courses and
+                projects, I worked a lot within the speculative design [X] and design friction [X] realm, something that
+                mostly lives within the academic world. I think within these design approaches, exactly the skills and
+                attitudes that I valued as designer come forward strongly, enabling me to develop myself within.
+                Next to this learning focus within Creativity and Aesthetics, I also wanted to develop myself within the
+                Math, Data and Computing expertise area. While mostly driven by my enjoyment in working with code and
+                data, and interests in new technologies, there was also an industry aspect here. Skills within this area
+                will only grow in the upcoming years, giving me a stronger position on the market after graduating.
+
+                So, in my masters I set out to investigate where and how an integration between these two aspects can
+                exist; critical and visionary design, and working with data and computing techniques. The course
+                ‘Creativity and aesthetics of data and AI’ couldn’t be more perfect. Seeing the application of futuring
+                and working with MDC-focused tools like LLMs and ML, was eye opening. Throughout my masters, I kept
+                referring my work to the aesthetics of intelligence introduced in the course [X].
+                When coming closer to graduating, new development questions arose; I know I like doing this
+                speculative-design-friction work, but how does that receive a space in the industry?
+
+            </p>
+
+            <div id="expertiseareas">
+                <h1 id="titleea" class="title">Areas of Expertise</h1>
+
+                <h3 id="EA1" class="projectlist title_smaller">Creativity & Aesthetics (CA)</h3>
+                <div id="ca" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="EA2" class="projectlist title_smaller">Math, Data & Computing (MDC)</h3>
+                <div id="mdc" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="EA3" class="projectlist title_smaller">Technology & Realization (TR)</h3>
+                <div id="tr" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="EA4" class="projectlist title_smaller">User & Society (US)</h3>
+                <div id="us" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="EA5" class="projectlist title_smaller">Business & Entrepreneurship (BE)</h3>
+                <div id="be" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+            </div>
+
+            <h1 id="titlepresent" class="title">Present</h1>
+            <p id="textpresent" class="normaltext">Over the years of being a designer, I have learned ‘how I work’. This
+                means I know what I need to proceed within the process and where my strengths and weaknesses lie.
+                I’ve learnt that I need cooperation in my projects; my creativity flows best if I can speak out loud,
+                spar with others and continue with new ideas, inspiration and input. In order to achieve this, I
+                organize and plan for co-creations, collaborations in projects, meetings with experts, and surround
+                myself in collaborative environments. A clear example of this is my collaboration with C°F. I
+                specifically looked for expertise within designing with data; enhancing my MDC skills that allow me to
+                collect, analyse, and visualize with digital data. I continued with this collaboration in my FMP because
+                of the fit I feel with the studio and to keep collaboration flowing through co-creation and reflection
+                sessions with colleagues, and presenting my work in design meetups.
+                When collaborating with others, clear communication is key. Giving clear project status update
+                presentations to my colleagues allowed me to receive concrete and detailed feedback.
+                Over the semesters, I have gotten better and better at this, even receiving an honorable mention in a
+                pitch competition during the prototype-day at C°F, stating that “the only intern at C°F gave the best
+                presentation”.
+            </p>
+
+            <h1 id="titleintegration" class="subtitle">Integration of Areas of Expertise</h1>
+            <p id="textintegration" class="normaltext">First of all, my work fully lives within the integration of MDC
+                and CA. During my masters, my work was focused on questioning the role of technology in our everyday
+                life, and how we can work towards a future in which spiritual aesthetics can be found in technology.
+                Think about feeling data visualizations or speculative design on digital twins. Next to this, I make use
+                of AI tools in the creative process, to inspire, collaborate, or bring in new perspectives, working with
+                the Aesthetics of Intelligence [X].
+
+                Secondly, inspired by the work of Lee, I use “technology as our moral mirror” [X]. In my work I show
+                notions of post phenomenology and pragmatism in design. Both these integrations require expertise in
+                both TR and US; building prototypes and understanding technological functioning (TR) and seeing societal
+                positioning, understanding social structures and user behavior (US). The attitude of pragmatism in
+                design does something very similar: using making skills to philosophize, working towards an
+                understanding for human and societal complexities.
+
+                Lastly, throughout my design process, I integrate all the areas of expertise, each of them having their
+                own purpose in the process. In the image below, an overview of my design process within my FMP is shown,
+                annotated with how the role the expertise areas played throughout.
+            </p>
+
+        </div>
+
+        <div id="processdiv" style="display: none;">
+            <img id="imgprocess" src="Processillustration.jpg" width="600px">
+        </div>
+
+        <div id="pastbox2" style="display: none;">
+            <h1 id="titlefuture" class="title">Future</h1>
+            <p id="textfuture" class="normaltext">After obtaining my Masters degree of Industrial Design, I have plans
+                for both my professional and personal journey.
+
+                Professionally, I see myself working within a small design studio, becoming a true team member and
+                content-designer. While I do have an eye for what is needed within a design process, how the next steps
+                can be executed, and for making informed decisions, I do not see myself as a project manager (yet). This
+                is because I have a big love for diving deep, staying close to the content and being able to make and
+                create with my hands (or digital tools).
+                While within my field of interest a PhD would be a more logical career choice, due to its academic
+                freedom and lack of commercial drive, I think a (small) design studio is a better fit for me. Compared
+                to a PhD, it offers more variety of work, more collaboration, and more freedom in design approach.
+                However, for me important is that there is still space for my critical- philosophical attitude, and room
+                for questioning and research.
+                I am therefore going to look for a visionary company, working on installations and pioneering projects,
+                that has a culture that encourages growth, exploration and collaboration. Examples of this are studios
+                like Falkland Studio, Fiction Factory, and Designwolf.
+
+                In the far future, I might even start a small design (research) studio myself. I think this offers the
+                opportunity to have full ownership in company vision, while staying close to content as well. However,
+                before I feel comfortable doing this, I want to have developed enough specialized skills, a big enough
+                network, and partnerships that want to take this challenge with me.
+
+                Having learned how important traveling and following ambitions also are for my personal (&
+                professional!) development, I want to travel before fully committing to a professional career.
+                I want to explore southern and eastern Europe by bike: connecting with nature and my surroundings, using
+                only my own strength and a very small collection of possessions to get around. For me the challenge here
+                lies mostly in learning to live small, and needing to connect with the environment and locals to find my
+                way, meet new people, and have a place to stay.
+            </p>
+
+        </div>
+
+        <div id="filesbox" style="display: none;">
+            <h1 id="titlefiles" class="title">Files</h1>
+            <a href="FMPreport.pdf" class="filelinks">> Report Final Master Project</a>
+            <a href="FBPreport.pdf" class="filelinks">> Report Final Bachelor Project</a>
+            <a href="DEDreport.pdf" class="filelinks">> Report Data Enabled Design</a>
+            <a href="Essay.pdf" class="filelinks">> Essay "What get's counted counts" (Let's Make Humans Better)</a>
+            <a href="IMvideo.mov" class="filelinks">> Manifesto Performance (Interactional Morality)</a>
+            <a href="IMreport.pdf" class="filelinks">> Manifesto Report (Interactional Morality)</a>
+
+            <h1 id="titlesources" class="title">References</h1>
+            <p id="textsources" class="normaltext">xxx</p>
+        </div>
+
+    </div>
+
+    <div id="banner">
+        <h1 id="bannertext" class="small_text">Portfolio Designed and Coded by Nikki Mureau</h1>
+    </div>
+
+
+    <script>
+        home();
+
+        var content1_open = false;
+
+        function home() {
+            homebox.style.display = 'flex';
+            aboutmebox.style.display = 'none';
+            pastbox1.style.display = 'none';
+            processdiv.style.display = 'none';
+            pastbox2.style.display = 'none';
+            projectsbox.style.display = 'none';
+            filesbox.style.display = 'none';
+        }
+        function aboutme() {
+            homebox.style.display = 'none';
+            aboutmebox.style.display = 'flex';
+            pastbox1.style.display = 'none';
+            processdiv.style.display = 'none';
+            pastbox2.style.display = 'none';
+            projectsbox.style.display = 'none';
+            filesbox.style.display = 'none';
+        }
+        function past() {
+            homebox.style.display = 'none';
+            aboutmebox.style.display = 'none';
+            pastbox1.style.display = 'flex';
+            processdiv.style.display = 'flex';
+            pastbox2.style.display = 'flex';
+            projectsbox.style.display = 'none';
+            filesbox.style.display = 'none';
+        }
+        function projects() {
+            homebox.style.display = 'none';
+            aboutmebox.style.display = 'none';
+            pastbox1.style.display = 'none';
+            processdiv.style.display = 'none';
+            pastbox2.style.display = 'none';
+            projectsbox.style.display = 'flex';
+            filesbox.style.display = 'none';
+        }
+        function files() {
+            homebox.style.display = 'none';
+            aboutmebox.style.display = 'none';
+            pastbox1.style.display = 'none';
+            processdiv.style.display = 'none';
+            pastbox2.style.display = 'none';
+            projectsbox.style.display = 'none';
+            filesbox.style.display = 'flex';
+        }
+
+
+    </script>
+</body>
