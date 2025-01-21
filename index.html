@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
     rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
 
 <head>
     <title>Nikki's Design Portfolio</title>
@@ -68,6 +72,8 @@
             padding: 20px;
             min-height: 70vh;
             padding-bottom: 200px;
+            padding-top: 100px;
+            align-items: flex-start;
         }
 
         #menu {
@@ -81,6 +87,10 @@
             /* justify-content: right; */
             /* flex-grow: 0.5; */
             /* align-items: right; */
+        }
+
+        .menu2 {
+            height: 20px;
         }
 
         .title {
@@ -121,11 +131,11 @@
         }
 
         .title_smaller {
-            font-family: "Lora", serif;
-            /* font-family: "Inter", serif; */
+            /* font-family: "Lora", serif; */
+            font-family: "Inter", serif;
             font-size: 15px;
             /* display: flex; */
-            padding-left: 20px;
+            /* padding-left: 20px; */
             flex-grow: 0.5;
             font-weight: 300;
         }
@@ -152,7 +162,14 @@
             font-weight: 300;
         }
 
-        #pastbox1,#pastbox2,
+        .notetext {
+            /* font-family: "Schoolbell", serif; */
+            font-family: "Gloria Hallelujah", serif;
+            font-size: 17px;
+            color: rgb(27, 149, 236);
+        }
+
+
         #filesbox,
         #aboutmebox {
             display: flex;
@@ -161,7 +178,7 @@
             align-items: flex-start;
             flex-wrap: wrap;
             flex-direction: column;
-            margin-top: 100px;
+            /* margin-top: 100px; */
         }
 
         button {
@@ -177,10 +194,80 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        a {
+            /* font-style: normal; */
+            font-size: 15px;
+            font-family: "Inter", serif;
+            text-decoration: none;
+            color: #4e4e4e;
+        }
+
         button:hover,
-        button:focus {
+        button:focus,
+        a:hover {
             background-color: #383838;
             color: #ffffff;
+        }
+
+        #button0:hover~#notehome {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+        #button1:hover~#noteaboutme {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+        #button2:hover~#notedevelopment {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+        #button3:hover~#notefiles {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+
+        #notehome {
+            position: absolute;
+            top: 5vh;
+            left: 60%;
+            width: 60vb;
+        }
+        #noteaboutme {
+            position: absolute;
+            top: 5vh;
+            left: 65%;
+            width: 60vb;
+        }
+        #notedevelopment {
+            position: absolute;
+            top: 5vh;
+            left: 67%;
+            width: 60vb;
+        }
+        #notefiles {
+            position: absolute;
+            top: 5vh;
+            left: 70%;
+            width: 60vb;
+        }
+
+
+        /* ----------------------- HOME ---------------------- */
+
+        #homebox {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        #sentencehome {
+            font-family: "Inter", serif;
+            font-weight: 400;
         }
 
         /* ----------------------- BANNER ---------------------- */
@@ -191,24 +278,35 @@
         }
 
         #banner {
-            background-color: #c9c9c9;
+            background-color: #363636;
             color: #ffffff;
             margin: 0;
         }
 
         /* ----------------------- ABOUT ME ---------------------- */
 
-        #titleidentity {
-            margin-top: 100px;
-        }
-
         #titlereferences {
             width: 100%;
-            margin-top: 120px;
+            margin-top: 20px;
+        }
+
+        #ref1,
+        #ref2,
+        #ref3 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         #textreferences {
             font-size: 14px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #titleidentity,
+        #titlereferences {
+            margin-top: 100px;
         }
 
         #textidentity:hover~#imgidentity {
@@ -226,11 +324,31 @@
         #imgelf {
             position: absolute;
             top: 110%;
-            left: 170%;
+            left: 100%;
+        }
+
+        #referencecontainer {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .referencesbuttons {
+            display: flex;
         }
 
 
         /* ----------------------- DEVELOPMENT ---------------------- */
+
+        #developmentbox {
+            align-items: center;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
 
         #textpast {
             flex-grow: 1;
@@ -242,31 +360,51 @@
             margin-top: 100px;
         }
 
-        #titlepresent {
-            margin-top: 100px;
-        }
-
-        #titlefuture {
+        #titlepresent,
+        #titlefuture,
+        #titlepast,
+        #titleprojects {
+            width: 100%;
             margin-top: 50px;
         }
 
         #imgprocess {
-            /* position: absolute; */
-            /* justify-items: center; */
-            /* top: 70%; */
             width: 80%;
             /* height: 20%; */
         }
 
         #processdiv {
             align-content: center;
+            width: 100%;
             /* position: relative; */
             justify-content: center;
             margin-top: 50px;
         }
 
-        #pastbox1,#pastbox2, #processdiv {
+        #menubox2 {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        #pastbox,
+        #futurebox {
             flex-grow: 1;
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 200px;
+        }
+
+        #presentbox {
+            flex-grow: 1;
+            width: 50%;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 50px;
         }
 
         /* ----------------------- FILES ---------------------- */
@@ -285,21 +423,34 @@
             color: #ffffff;
         }
 
-        #titlesources {
-            margin-top: 100px;
-        }
 
         #filesbox {
             align-items: flex-end;
             margin-left: 70vb;
+            display: flex;
+            /* align-items: center; */
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 200px;
         }
 
 
         /* ----------------------- PROJECTS ---------------------- */
 
-        #projectsbox {
+        #menubox3 {
             display: flex;
-            width: 60%;
+            flex-wrap: nowrap;
+        }
+
+        .textblock {
+            width: 100%;
+            background-color: #4e4e4e;
+            color: #ffffff;
+        }
+
+        #projectsbox {
+            width: 50%;
+            display: flex;
             align-items: flex-start;
             flex-wrap: wrap;
             flex-direction: column;
@@ -307,7 +458,7 @@
         }
 
         #titleprojects {
-            margin-top: 100px;
+            /* margin-top: 100px; */
             flex-grow: 1;
         }
 
@@ -327,9 +478,10 @@
             flex-grow: 1;
             margin: 0;
             margin-top: -2px;
-            padding-left: 20px;
+            /* padding-left: 20px; */
             align-content: center;
             z-index: 10;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .projectlist:hover {
@@ -488,121 +640,32 @@
         <div id="menu">
             <button class="menu" id="button0" onclick="home()">HOME</button>
             <button class="menu" id="button1" onclick="aboutme()">ABOUT ME</button>
-            <button class="menu" id="button2" onclick="past()">DEVELOPMENT</button>
-            <button class="menu" id="button3" onclick="projects()">MY WORK</button>
+            <button class="menu" id="button2" onclick="development()">DEVELOPMENT</button>
             <button class="menu" id="button3" onclick="files()">FILES AND REFERENCES</button>
+            <div id="notehome" class="hoverpages"><p class="notetext">Welcome to my portfolio!</p></div>
+            <div id="noteaboutme" class="hoverpages"><p class="notetext">Read about what designer I am (PIV)</p></div>
+            <div id="notedevelopment" class="hoverpages"><p class="notetext">Here I write about my development trajectory; my goals & what I did (past), how I work (present), and my next plans (future).</p></div>
+            <div id="notefiles" class="hoverpages"><p class="notetext">Here you can find the references of the text, and the relevant deliverables and files of my work if you want to have a more detailed look.</p></div>    
         </div>
-
-        <div></div>
-    </div>
+        
+ </div>
 
     <div id="content">
 
         <div id="homebox" style="display: none;">
-            <p id="titlehome" class="title">Welcome to my portfolio!</p>
-        </div>
+            <p id="titlehome1" class="notetext">Welcome to my portfolio!</p>
+            <p id="sentencehome" class="title">I am a sensitive data-designer that combines intuition and philosophy
+                with data, technology & code, to speculate about alternatives on the future everyday. </p>
+            <p id="titlehome2" class="notetext">You can read about this on the <a href="javascript:aboutme()">ABOUT
+                    ME</a> page.</p>
 
-        <div id="projectsbox" style="display: none;">
-            <h1 id="titleprojects" class="title">Projects</h1>
-
-            <h1 id="project1" class="projectlist title_smaller">Final Master Project - Spiritual Technology: Designing
-                Space for Spirituality in the Everyday</h1>
-            <div id="p1" class="hoverpages">
-                <img id="img1" src="FMP1.JPG" width="200px">
-                <img id="img2" src="FMP2.JPG" width="300px">
-                <img id="img3" src="FMP3.JPG" width="300px">
-                <img id="img4" src="FMP4.JPG" width="250px">
-            </div>
-
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project2" class="projectlist title_smaller">Data Enabled Design</h3>
-            <div id="p2" class="hoverpages">
-                <embed id="img5" src="DED1.pdf" type="application/pdf" width="200px" />
-                <embed id="img6" src="DED2.pdf" type="application/pdf" width="200px" />
-                <embed id="img7" src="DED3.pdf" type="application/pdf" width="200px" />
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project4" class="projectlist title_smaller">Matters of Transformation</h3>
-            <div id="p3" class="hoverpages">
-                <img id="img1a" src="FMP1.JPG" width="200px">
-                <img id="img2a" src="FMP2.JPG" width="300px">
-                <img id="img3a" src="FMP3.JPG" width="300px">
-                <img id="img4a" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project3" class="projectlist title_smaller">M2.1 - CLEVER°FRANKE</h3>
-            <div id="p4" class="hoverpages">
-                <img id="img1b" src="FMP1.JPG" width="200px">
-                <img id="img2b" src="FMP2.JPG" width="300px">
-                <img id="img3b" src="FMP3.JPG" width="300px">
-                <img id="img4b" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project5" class="projectlist title_smaller">Let's make Humans Better</h3>
-            <div id="p5" class="hoverpages">
-                <img id="img1c" src="FMP1.JPG" width="200px">
-                <img id="img2c" src="FMP2.JPG" width="300px">
-                <img id="img3c" src="FMP3.JPG" width="300px">
-                <img id="img4c" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project6" class="projectlist title_smaller">M1.2 - On the future of Dataism</h3>
-            <div id="p6" class="hoverpages">
-                <img id="img1d" src="FMP1.JPG" width="200px">
-                <img id="img2d" src="FMP2.JPG" width="300px">
-                <img id="img3d" src="FMP3.JPG" width="300px">
-                <img id="img4d" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project7" class="projectlist title_smaller">M1.1 - Track.(ID)</h3>
-            <div id="p7" class="hoverpages">
-                <img id="img1e" src="FMP1.JPG" width="200px">
-                <img id="img2e" src="FMP2.JPG" width="300px">
-                <img id="img3e" src="FMP3.JPG" width="300px">
-                <img id="img4e" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project8" class="projectlist title_smaller">Interactional Morality</h3>
-            <div id="p8" class="hoverpages">
-                <img id="img1f" src="FMP1.JPG" width="200px">
-                <img id="img2f" src="FMP2.JPG" width="300px">
-                <img id="img3f" src="FMP3.JPG" width="300px">
-                <img id="img4f" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project9" class="projectlist title_smaller">Constructive Design Research</h3>
-            <div id="p9" class="hoverpages">
-                <img id="img1g" src="FMP1.JPG" width="200px">
-                <img id="img2g" src="FMP2.JPG" width="300px">
-                <img id="img3g" src="FMP3.JPG" width="300px">
-                <img id="img4g" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project10" class="projectlist title_smaller">Designerly Perspective on IoT</h3>
-            <div id="p10" class="hoverpages">
-                <img id="img1h" src="FMP1.JPG" width="200px">
-                <img id="img2h" src="FMP2.JPG" width="300px">
-                <img id="img3h" src="FMP3.JPG" width="300px">
-                <img id="img4h" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project11" class="projectlist title_smaller">Creativity and Aesthetics of Data and AI</h3>
-            <div id="p11" class="hoverpages">
-                <img id="img1i" src="FMP1.JPG" width="200px">
-                <img id="img2i" src="FMP2.JPG" width="300px">
-                <img id="img3i" src="FMP3.JPG" width="300px">
-                <img id="img4i" src="FMP4.JPG" width="250px">
-            </div>
-            <hr width="100%" style="margin: 0%;">
-            <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmelia Sensis</h3>
-            <div id="p2" class="hoverpages">
-                <img id="img1j" src="FMP1.JPG" width="200px">
-                <img id="img2j" src="FMP2.JPG" width="300px">
-                <img id="img3j" src="FMP3.JPG" width="300px">
-                <img id="img4j" src="FMP4.JPG" width="250px">
-            </div>
-
-            <h2 class="normaltext"></h2>
+            <p id="titlehome2" class="notetext">If you want to know how I got there and how I like to work, check
+                out the <a href="javascript:development()">DEVELOPMENT</a> page. Here I showcase my projects too, as
+                they demonstrate my skills and I explain
+                how they contributed to my development.
+            </p>
+            <p id="titlehome2" class="notetext">And if you want to ‘get freaky’ in the details, download my
+                deliverables on the <a href="javascript:files()">FILES AND REFERENCES</a> page.</p>
         </div>
 
         <div id="aboutmebox" style="display: none;">
@@ -684,191 +747,375 @@
             </div>
 
             <h1 id="titlereferences" class="title centered">References</h1>
-            <div id="textreferences" class="normaltext centered">
-                <p><i>“I have worked with Nikki in her time as intern and as junior functionality designer at MMID. Both
-                        times she was part of projects I was leading. Nikki is a great team member to have, a competent
-                        and diverse designer. She has a keen eye to really understand the problem at hand, takes the
-                        extra effort to really understand what is the core of the challenge, and is not afraid to dive
-                        into new things. I was impressed by the speed with which she can familiarize herself with new
-                        skills and apply them in a useful manner. This with a good balance between autonomy and keeping
-                        in good contact with the team, client and project goals. Aside from all the professional
-                        feedback Nikki is just a fun person to work with as well, we have has many laughs together!”
-                    </i></p>
-                <p>Scott Hoekstra - Project leader R&D</p>
+            <div id="referencecontainer">
+                <button class="referencesbuttons" id="buttonref" onclick="previousslide()">
+                    < </button>
+                        <div id="textreferences" class="normaltext centered">
+                            <div id="ref3" style="display: none;">
+                                <p><i>“I have worked with Nikki in her time as intern and as junior functionality
+                                        designer
+                                        at MMID. Both
+                                        times she was part of projects I was leading. Nikki is a great team member to
+                                        have,
+                                        a competent
+                                        and diverse designer. She has a keen eye to really understand the problem at
+                                        hand,
+                                        takes the
+                                        extra effort to really understand what is the core of the challenge, and is not
+                                        afraid to dive
+                                        into new things. I was impressed by the speed with which she can familiarize
+                                        herself
+                                        with new
+                                        skills and apply them in a useful manner. This with a good balance between
+                                        autonomy
+                                        and keeping
+                                        in good contact with the team, client and project goals. Aside from all the
+                                        professional
+                                        feedback Nikki is just a fun person to work with as well, we have has many
+                                        laughs
+                                        together!”
+                                    </i></p>
+                                <p>Scott Hoekstra - Project leader R&D</p>
+                            </div>
+                            <div id="ref2" style="display: none;">
+                                <p><i>“Throughout her internship, Nikki demonstrated strong technical capabilities in
+                                        prototyping and a commitment to translating concepts into refined physical
+                                        outcomes. Her natural curiosity and thoughtful questioning of design’s
+                                        underlying principles revealed a considered approach to the field.”</i></p>
+                                <p>Elena Etter - Visual Designer @ Clever°Franke</p>
+                            </div>
+                            <div id="ref1" style="display: none;">
+                                <p><i>“It was a pleasure to have Nikki on our team for both her internship and thesis work. She clicked with the team and studio right from the start. Not only did she contribute to her own work, but she also actively participated in various other studio projects and initiatives. Nikki is a strong conceptual thinker, particularly focused on the more humanistic and spiritual aspects of technology and design. Her work and perspectives on these topics were an inspiration to the team.”</i></p>
+                                <p>Bob Corporaal - Design lead @ Clever°Franke</p>
+                            </div>
+                        </div>
+                        <button class="referencesbuttons" id="buttonref" onclick="nextslide()">
+                            > </button>
             </div>
 
         </div>
 
-        <div id="pastbox1" style="display: none;">
-            <h1 id="titlepast" class="title">Past</h1>
-            <p id="textpast" class="normaltext">Before my masters, I completed the bachelors of Industrial Design at
-                the TU/e as well.
-                During my bachelors, I did an <a href="javascript:imgproject1()">internship</a> at Design Agency MMID in
-                Delft [X]. In this internship, I was
-                looking explicitly to develop my hard skills and wanted to learn more about the ‘finalizing’ and end
-                stages of designing, something that I really missed in my education at the time. The internship could
-                very well provide me in this, however I learned that while very interesting, the skills and processes
-                closer to releasing a product were not the ones I felt like I should develop further in. I learned to
-                value the skills I developed at Eindhoven, which when talking about product development stage belong
-                more to the front-end, even more than I had before. Specifically, I am talking about critical thinking,
-                unraveling conceptual and contextual complexity, approaching design from a visionary and transforming
-                standpoint. Those were the attributes I had as a designer that made me stand out at MMID, and that made
-                me capable of adding something valuable to the projects there.
 
-                After my bachelors I continued to work at MMID, first part-time during my FBP and after graduating
-                full-time. In this experience, I liked the projects most where I could contribute conceptually and
-                visionary, working on the bigger picture of the project.
-                This is in the end why I ended up choosing to pursue my masters at the TU/e as well; I felt that those
-                things I valued most about my work were very ‘TU/e-style’, and I saw the infancy of it, feeling that I
-                could still learn so much on this topic in the masters ID.
-                Next to this, my experience of working in the industry reinforced my appreciation for the opportunities
-                the academic world provides. It allowed me to still focus on my personal development, work on projects
-                without financial or market interests, and left room for both deep and broad experimentation and
-                explorations.
-
-                This mentality is also seen back in my development focus within my masters. Throughout my courses and
-                projects, I worked a lot within the speculative design [X] and design friction [X] realm, something that
-                mostly lives within the academic world. I think within these design approaches, exactly the skills and
-                attitudes that I valued as designer come forward strongly, enabling me to develop myself within.
-                Next to this learning focus within Creativity and Aesthetics, I also wanted to develop myself within the
-                Math, Data and Computing expertise area. While mostly driven by my enjoyment in working with code and
-                data, and interests in new technologies, there was also an industry aspect here. Skills within this area
-                will only grow in the upcoming years, giving me a stronger position on the market after graduating.
-
-                So, in my masters I set out to investigate where and how an integration between these two aspects can
-                exist; critical and visionary design, and working with data and computing techniques. The course
-                ‘Creativity and aesthetics of data and AI’ couldn’t be more perfect. Seeing the application of futuring
-                and working with MDC-focused tools like LLMs and ML, was eye opening. Throughout my masters, I kept
-                referring my work to the aesthetics of intelligence introduced in the course [X].
-                When coming closer to graduating, new development questions arose; I know I like doing this
-                speculative-design-friction work, but how does that receive a space in the industry?
-
-            </p>
-
-            <div id="expertiseareas">
-                <h1 id="titleea" class="title">Areas of Expertise</h1>
-
-                <h3 id="EA1" class="projectlist title_smaller">Creativity & Aesthetics (CA)</h3>
-                <div id="ca" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
-
-                <hr width="100%" style="margin: 0%;">
-                <h3 id="EA2" class="projectlist title_smaller">Math, Data & Computing (MDC)</h3>
-                <div id="mdc" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
-
-                <hr width="100%" style="margin: 0%;">
-                <h3 id="EA3" class="projectlist title_smaller">Technology & Realization (TR)</h3>
-                <div id="tr" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
-
-                <hr width="100%" style="margin: 0%;">
-                <h3 id="EA4" class="projectlist title_smaller">User & Society (US)</h3>
-                <div id="us" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
-
-                <hr width="100%" style="margin: 0%;">
-                <h3 id="EA5" class="projectlist title_smaller">Business & Entrepreneurship (BE)</h3>
-                <div id="be" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
+        <div id="developmentbox" style="display: none;">
+            <div id="menubox2">
+                <button class="menu2" id="b1" onclick="past()">PAST</button>
+                <button class="menu2" id="b2" onclick="projects()">MY WORK</button>
+                <button class="menu2" id="b3" onclick="present()">PRESENT</button>
+                <button class="menu2" id="b4" onclick="future()">FUTURE</button>
             </div>
 
-            <h1 id="titlepresent" class="title">Present</h1>
-            <p id="textpresent" class="normaltext">Over the years of being a designer, I have learned ‘how I work’. This
-                means I know what I need to proceed within the process and where my strengths and weaknesses lie.
-                I’ve learnt that I need cooperation in my projects; my creativity flows best if I can speak out loud,
-                spar with others and continue with new ideas, inspiration and input. In order to achieve this, I
-                organize and plan for co-creations, collaborations in projects, meetings with experts, and surround
-                myself in collaborative environments. A clear example of this is my collaboration with C°F. I
-                specifically looked for expertise within designing with data; enhancing my MDC skills that allow me to
-                collect, analyse, and visualize with digital data. I continued with this collaboration in my FMP because
-                of the fit I feel with the studio and to keep collaboration flowing through co-creation and reflection
-                sessions with colleagues, and presenting my work in design meetups.
-                When collaborating with others, clear communication is key. Giving clear project status update
-                presentations to my colleagues allowed me to receive concrete and detailed feedback.
-                Over the semesters, I have gotten better and better at this, even receiving an honorable mention in a
-                pitch competition during the prototype-day at C°F, stating that “the only intern at C°F gave the best
-                presentation”.
-            </p>
+            <div id="pastbox" style="display: none;">
 
-            <h1 id="titleintegration" class="subtitle">Integration of Areas of Expertise</h1>
-            <p id="textintegration" class="normaltext">First of all, my work fully lives within the integration of MDC
-                and CA. During my masters, my work was focused on questioning the role of technology in our everyday
-                life, and how we can work towards a future in which spiritual aesthetics can be found in technology.
-                Think about feeling data visualizations or speculative design on digital twins. Next to this, I make use
-                of AI tools in the creative process, to inspire, collaborate, or bring in new perspectives, working with
-                the Aesthetics of Intelligence [X].
+                <p id="notepast" class="notetext centered">In this section, I look back at my motivations for choosing
+                    to pursue
+                    the masters Industrial Design at the TU/e, and describe the intentionalities of my personal
+                    development from during my studies.
+                </p>
 
-                Secondly, inspired by the work of Lee, I use “technology as our moral mirror” [X]. In my work I show
-                notions of post phenomenology and pragmatism in design. Both these integrations require expertise in
-                both TR and US; building prototypes and understanding technological functioning (TR) and seeing societal
-                positioning, understanding social structures and user behavior (US). The attitude of pragmatism in
-                design does something very similar: using making skills to philosophize, working towards an
-                understanding for human and societal complexities.
+                <h1 id="titlepast" class="title">Past</h1>
+                <p id="textpast" class="normaltext">Before my masters, I completed the bachelors of Industrial Design at
+                    the TU/e as well.
+                    During my bachelors, I did an <a href="javascript:imgproject1()">internship</a> at Design Agency
+                    MMID in
+                    Delft [X]. In this internship, I was
+                    looking explicitly to develop my hard skills and wanted to learn more about the ‘finalizing’ and end
+                    stages of designing, something that I really missed in my education at the time. The internship
+                    could
+                    very well provide me in this, however I learned that while very interesting, the skills and
+                    processes
+                    closer to releasing a product were not the ones I felt like I should develop further in. I learned
+                    to
+                    value the skills I developed at Eindhoven, which when talking about product development stage belong
+                    more to the front-end, even more than I had before. Specifically, I am talking about critical
+                    thinking,
+                    unraveling conceptual and contextual complexity, approaching design from a visionary and
+                    transforming
+                    standpoint. Those were the attributes I had as a designer that made me stand out at MMID, and that
+                    made
+                    me capable of adding something valuable to the projects there.
 
-                Lastly, throughout my design process, I integrate all the areas of expertise, each of them having their
-                own purpose in the process. In the image below, an overview of my design process within my FMP is shown,
-                annotated with how the role the expertise areas played throughout.
-            </p>
+                    After my bachelors I continued to work at MMID, first part-time during my FBP and after graduating
+                    full-time. In this experience, I liked the projects most where I could contribute conceptually and
+                    visionary, working on the bigger picture of the project.
+                    This is in the end why I ended up choosing to pursue my masters at the TU/e as well; I felt that
+                    those
+                    things I valued most about my work were very ‘TU/e-style’, and I saw the infancy of it, feeling that
+                    I
+                    could still learn so much on this topic in the masters ID.
+                    Next to this, my experience of working in the industry reinforced my appreciation for the
+                    opportunities
+                    the academic world provides. It allowed me to still focus on my personal development, work on
+                    projects
+                    without financial or market interests, and left room for both deep and broad experimentation and
+                    explorations.
 
-        </div>
+                    This mentality is also seen back in my development focus within my masters. Throughout my courses
+                    and
+                    projects, I worked a lot within the speculative design [X] and design friction [X] realm, something
+                    that
+                    mostly lives within the academic world. I think within these design approaches, exactly the skills
+                    and
+                    attitudes that I valued as designer come forward strongly, enabling me to develop myself within.
+                    Next to this learning focus within Creativity and Aesthetics, I also wanted to develop myself within
+                    the
+                    Math, Data and Computing expertise area. While mostly driven by my enjoyment in working with code
+                    and
+                    data, and interests in new technologies, there was also an industry aspect here. Skills within this
+                    area
+                    will only grow in the upcoming years, giving me a stronger position on the market after graduating.
 
-        <div id="processdiv" style="display: none;">
-            <img id="imgprocess" src="Processillustration.jpg" width="600px">
-        </div>
+                    So, in my masters I set out to investigate where and how an integration between these two aspects
+                    can
+                    exist; critical and visionary design, and working with data and computing techniques. The course
+                    ‘Creativity and aesthetics of data and AI’ couldn’t be more perfect. Seeing the application of
+                    futuring
+                    and working with MDC-focused tools like LLMs and ML, was eye opening. Throughout my masters, I kept
+                    referring my work to the aesthetics of intelligence introduced in the course [X].
+                    When coming closer to graduating, new development questions arose; I know I like doing this
+                    speculative-design-friction work, but how does that receive a space in the industry?
+                </p>
+            </div>
 
-        <div id="pastbox2" style="display: none;">
-            <h1 id="titlefuture" class="title">Future</h1>
-            <p id="textfuture" class="normaltext">After obtaining my Masters degree of Industrial Design, I have plans
-                for both my professional and personal journey.
+            <div id="projectsbox" style="display: none;">
 
-                Professionally, I see myself working within a small design studio, becoming a true team member and
-                content-designer. While I do have an eye for what is needed within a design process, how the next steps
-                can be executed, and for making informed decisions, I do not see myself as a project manager (yet). This
-                is because I have a big love for diving deep, staying close to the content and being able to make and
-                create with my hands (or digital tools).
-                While within my field of interest a PhD would be a more logical career choice, due to its academic
-                freedom and lack of commercial drive, I think a (small) design studio is a better fit for me. Compared
-                to a PhD, it offers more variety of work, more collaboration, and more freedom in design approach.
-                However, for me important is that there is still space for my critical- philosophical attitude, and room
-                for questioning and research.
-                I am therefore going to look for a visionary company, working on installations and pioneering projects,
-                that has a culture that encourages growth, exploration and collaboration. Examples of this are studios
-                like Falkland Studio, Fiction Factory, and Designwolf.
+                <p id="noteprojects" class="notetext centered">Take a look at my work. I describe what skills they
+                    demonstrate
+                    and how those contributed to my development. Try out filtering them by Expertise Area! </p>
 
-                In the far future, I might even start a small design (research) studio myself. I think this offers the
-                opportunity to have full ownership in company vision, while staying close to content as well. However,
-                before I feel comfortable doing this, I want to have developed enough specialized skills, a big enough
-                network, and partnerships that want to take this challenge with me.
+                <h1 id="titleprojects" class="title">Projects</h1>
 
-                Having learned how important traveling and following ambitions also are for my personal (&
-                professional!) development, I want to travel before fully committing to a professional career.
-                I want to explore southern and eastern Europe by bike: connecting with nature and my surroundings, using
-                only my own strength and a very small collection of possessions to get around. For me the challenge here
-                lies mostly in learning to live small, and needing to connect with the environment and locals to find my
-                way, meet new people, and have a place to stay.
-            </p>
+                <!-- <div id="menubox3">
+                    <button class="menu3" id="selector1" onclick="CA()">C&A</button>
+                    <button class="menu3" id="selector2" onclick="MDC()">MDC</button>
+                    <button class="menu3" id="selector3" onclick="TR()">T&R</button>
+                    <button class="menu3" id="selector4" onclick="US()">U&S</button>
+                    <button class="menu3" id="selector4" onclick="BE()">B&E</button>
+                </div> -->
 
+                <h1 id="project1" class="projectlist title_smaller">Final Master Project - Spiritual Technology:
+                    Designing
+                    Space for Spirituality in the Everyday</h1>
+                <div id="p1" class="hoverpages">
+                    <img id="img1" src="FMP1.JPG" width="200px">
+                    <img id="img2" src="FMP2.JPG" width="300px">
+                    <img id="img3" src="FMP3.JPG" width="300px">
+                    <img id="img4" src="FMP4.JPG" width="250px">
+                </div>
+
+                <hr width="100%" style="margin: 0%;">
+                    <h3 id="project2" class="projectlist title_smaller">Data Enabled Design</h3>
+                    <div id="textp2" class="textblock" style="display: none;"><p class="small_text">This course introduces the Data Enabled Design methodology [X], and with my group we applied this to study the behavior of people in their living space with a focus on mental health. Through first researching the context of behavior in a specific setting with sensor probes and data collection, we then, in the informed step, intervene the setting with an adjustable light design.</p>
+                    <p class="small_text">This course demonstrates my skills within prototyping and the integration of software and hardware that enables remote data collection. Furthermore it demonstrates both qualitative and quantitative data analysis, and how they are combined within the inquiry, to then show how these data insights drive the design choices in the project.</p>
+                    <p class="small_text">The development of these skills allowed me to integrate the collection and analysis of (quantitative) data, for example in my FMP. It established a familiarity with integrating DataFoundry and using OOCSI, making me more easily apply these tools in other projects. This allowed me to come closer to my desired identity as designer; becoming a data designer that integrates data science in her process.
+                    </p>
+                    <p class="small_text">Acknowledgements: Niels Winkelman, Naixin Liu, Latisha Boor</p>
+                    </div>
+                <div id="p2" class="hoverpages">
+                    <embed id="img5" src="DED1.pdf" type="application/pdf" width="200px" />
+                    <embed id="img6" src="DED2.pdf" type="application/pdf" width="200px" />
+                    <embed id="img7" src="DED3.pdf" type="application/pdf" width="200px" />
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project4" class="projectlist title_smaller">Matters of Transformation</h3>
+                <div id="p3" class="hoverpages">
+                    <img id="img1a" src="FMP1.JPG" width="200px">
+                    <img id="img2a" src="FMP2.JPG" width="300px">
+                    <img id="img3a" src="FMP3.JPG" width="300px">
+                    <img id="img4a" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project3" class="projectlist title_smaller">M2.1 - CLEVER°FRANKE</h3>
+                <div id="p4" class="hoverpages">
+                    <img id="img1b" src="FMP1.JPG" width="200px">
+                    <img id="img2b" src="FMP2.JPG" width="300px">
+                    <img id="img3b" src="FMP3.JPG" width="300px">
+                    <img id="img4b" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project5" class="projectlist title_smaller">Let's make Humans Better</h3>
+                <div id="p5" class="hoverpages">
+                    <img id="img1c" src="FMP1.JPG" width="200px">
+                    <img id="img2c" src="FMP2.JPG" width="300px">
+                    <img id="img3c" src="FMP3.JPG" width="300px">
+                    <img id="img4c" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project6" class="projectlist title_smaller">M1.2 - On the future of Dataism</h3>
+                <div id="p6" class="hoverpages">
+                    <img id="img1d" src="FMP1.JPG" width="200px">
+                    <img id="img2d" src="FMP2.JPG" width="300px">
+                    <img id="img3d" src="FMP3.JPG" width="300px">
+                    <img id="img4d" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project7" class="projectlist title_smaller">M1.1 - Track.(ID)</h3>
+                <div id="p7" class="hoverpages">
+                    <img id="img1e" src="FMP1.JPG" width="200px">
+                    <img id="img2e" src="FMP2.JPG" width="300px">
+                    <img id="img3e" src="FMP3.JPG" width="300px">
+                    <img id="img4e" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project8" class="projectlist title_smaller">Interactional Morality</h3>
+                <div id="p8" class="hoverpages">
+                    <img id="img1f" src="FMP1.JPG" width="200px">
+                    <img id="img2f" src="FMP2.JPG" width="300px">
+                    <img id="img3f" src="FMP3.JPG" width="300px">
+                    <img id="img4f" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project9" class="projectlist title_smaller">Constructive Design Research</h3>
+                <div id="p9" class="hoverpages">
+                    <img id="img1g" src="FMP1.JPG" width="200px">
+                    <img id="img2g" src="FMP2.JPG" width="300px">
+                    <img id="img3g" src="FMP3.JPG" width="300px">
+                    <img id="img4g" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project10" class="projectlist title_smaller">Designerly Perspective on IoT</h3>
+                <div id="p10" class="hoverpages">
+                    <img id="img1h" src="FMP1.JPG" width="200px">
+                    <img id="img2h" src="FMP2.JPG" width="300px">
+                    <img id="img3h" src="FMP3.JPG" width="300px">
+                    <img id="img4h" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project11" class="projectlist title_smaller">Creativity and Aesthetics of Data and AI</h3>
+                <div id="p11" class="hoverpages">
+                    <img id="img1i" src="FMP1.JPG" width="200px">
+                    <img id="img2i" src="FMP2.JPG" width="300px">
+                    <img id="img3i" src="FMP3.JPG" width="300px">
+                    <img id="img4i" src="FMP4.JPG" width="250px">
+                </div>
+                <hr width="100%" style="margin: 0%;">
+                <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmelia Sensis</h3>
+                <div id="p2" class="hoverpages">
+                    <img id="img1j" src="FMP1.JPG" width="200px">
+                    <img id="img2j" src="FMP2.JPG" width="300px">
+                    <img id="img3j" src="FMP3.JPG" width="300px">
+                    <img id="img4j" src="FMP4.JPG" width="250px">
+                </div>
+
+                <h2 class="normaltext"></h2>
+            </div>
+
+
+            <div id="presentbox" style="display: none;">
+
+                <p id="notepresent" class="notetext centered">In this section, I reflect on my work approach, the
+                    application of
+                    the expertise areas within, and my professional skills. For this I mostly refer to my Final Master
+                    Project.</p>
+
+                <h1 id="titlepresent" class="title">Present</h1>
+                <p id="textpresent" class="normaltext">Over the years of being a designer, I have learned ‘how I work’.
+                    This
+                    means I know what I need to proceed within the process and where my strengths and weaknesses lie.
+                    I’ve learnt that I need cooperation in my projects; my creativity flows best if I can speak out
+                    loud,
+                    spar with others and continue with new ideas, inspiration and input. In order to achieve this, I
+                    organize and plan for co-creations, collaborations in projects, meetings with experts, and surround
+                    myself in collaborative environments. A clear example of this is my collaboration with C°F. I
+                    specifically looked for expertise within designing with data; enhancing my MDC skills that allow me
+                    to
+                    collect, analyse, and visualize with digital data. I continued with this collaboration in my FMP
+                    because
+                    of the fit I feel with the studio and to keep collaboration flowing through co-creation and
+                    reflection
+                    sessions with colleagues, and presenting my work in design meetups.
+                    When collaborating with others, clear communication is key. Giving clear project status update
+                    presentations to my colleagues allowed me to receive concrete and detailed feedback.
+                    Over the semesters, I have gotten better and better at this, even receiving an honorable mention in
+                    a
+                    pitch competition during the prototype-day at C°F, stating that “the only intern at C°F gave the
+                    best
+                    presentation”.
+                </p>
+
+                <h1 id="titleintegration" class="subtitle">Integration of Areas of Expertise</h1>
+                <p id="textintegration" class="normaltext">First of all, my work fully lives within the integration of
+                    MDC
+                    and CA. During my masters, my work was focused on questioning the role of technology in our everyday
+                    life, and how we can work towards a future in which spiritual aesthetics can be found in technology.
+                    Think about feeling data visualizations or speculative design on digital twins. Next to this, I make
+                    use
+                    of AI tools in the creative process, to inspire, collaborate, or bring in new perspectives, working
+                    with
+                    the Aesthetics of Intelligence [X].
+
+                    Secondly, inspired by the work of Lee, I use “technology as our moral mirror” [X]. In my work I show
+                    notions of post phenomenology and pragmatism in design. Both these integrations require expertise in
+                    both TR and US; building prototypes and understanding technological functioning (TR) and seeing
+                    societal
+                    positioning, understanding social structures and user behavior (US). The attitude of pragmatism in
+                    design does something very similar: using making skills to philosophize, working towards an
+                    understanding for human and societal complexities.
+
+                    Lastly, throughout my design process, I integrate all the areas of expertise, each of them having
+                    their
+                    own purpose in the process. In the image below, an overview of my design process within my FMP is
+                    shown,
+                    annotated with how the role the expertise areas played throughout.
+                </p>
+            </div>
+
+            <div id="futurebox" style="display: none;">
+
+                <p id="notefuture" class="notetext centered">In this section, I look forward to the challenges ahead of
+                    me. I
+                    describe my positionality within the industry and explain what I look for in a professional setting.
+                </p>
+
+                <h1 id="titlefuture" class="title">Future</h1>
+                <p id="textfuture" class="normaltext">After obtaining my Masters degree of Industrial Design, I have
+                    plans
+                    for both my professional and personal journey.
+
+                    Professionally, I see myself working within a small design studio, becoming a true team member and
+                    content-designer. While I do have an eye for what is needed within a design process, how the next
+                    steps
+                    can be executed, and for making informed decisions, I do not see myself as a project manager (yet).
+                    This
+                    is because I have a big love for diving deep, staying close to the content and being able to make
+                    and
+                    create with my hands (or digital tools).
+                    While within my field of interest a PhD would be a more logical career choice, due to its academic
+                    freedom and lack of commercial drive, I think a (small) design studio is a better fit for me.
+                    Compared
+                    to a PhD, it offers more variety of work, more collaboration, and more freedom in design approach.
+                    However, for me important is that there is still space for my critical- philosophical attitude, and
+                    room
+                    for questioning and research.
+                    I am therefore going to look for a visionary company, working on installations and pioneering
+                    projects,
+                    that has a culture that encourages growth, exploration and collaboration. Examples of this are
+                    studios
+                    like Falkland Studio, Fiction Factory, and Designwolf.
+
+                    In the far future, I might even start a small design (research) studio myself. I think this offers
+                    the
+                    opportunity to have full ownership in company vision, while staying close to content as well.
+                    However,
+                    before I feel comfortable doing this, I want to have developed enough specialized skills, a big
+                    enough
+                    network, and partnerships that want to take this challenge with me.
+
+                    Having learned how important traveling and following ambitions also are for my personal (&
+                    professional!) development, I want to travel before fully committing to a professional career.
+                    I want to explore southern and eastern Europe by bike: connecting with nature and my surroundings,
+                    using
+                    only my own strength and a very small collection of possessions to get around. For me the challenge
+                    here
+                    lies mostly in learning to live small, and needing to connect with the environment and locals to
+                    find my
+                    way, meet new people, and have a place to stay.
+                </p>
+
+            </div>
+
+            <div id="processdiv" style="display: none;">
+                <img id="imgprocess" src="Processillustration.jpg" width="600px">
+            </div>
         </div>
 
         <div id="filesbox" style="display: none;">
@@ -886,6 +1133,8 @@
 
     </div>
 
+
+
     <div id="banner">
         <h1 id="bannertext" class="small_text">Portfolio Designed and Coded by Nikki Mureau</h1>
     </div>
@@ -893,54 +1142,117 @@
 
     <script>
         home();
-
+        var refslide = 1;
         var content1_open = false;
 
         function home() {
             homebox.style.display = 'flex';
             aboutmebox.style.display = 'none';
-            pastbox1.style.display = 'none';
-            processdiv.style.display = 'none';
-            pastbox2.style.display = 'none';
-            projectsbox.style.display = 'none';
+            developmentbox.style.display = 'none';
             filesbox.style.display = 'none';
         }
         function aboutme() {
             homebox.style.display = 'none';
             aboutmebox.style.display = 'flex';
-            pastbox1.style.display = 'none';
-            processdiv.style.display = 'none';
-            pastbox2.style.display = 'none';
-            projectsbox.style.display = 'none';
+            developmentbox.style.display = 'none';
             filesbox.style.display = 'none';
+            showslide();
         }
-        function past() {
+
+        function development() {
             homebox.style.display = 'none';
             aboutmebox.style.display = 'none';
-            pastbox1.style.display = 'flex';
-            processdiv.style.display = 'flex';
-            pastbox2.style.display = 'flex';
-            projectsbox.style.display = 'none';
-            filesbox.style.display = 'none';
-        }
-        function projects() {
-            homebox.style.display = 'none';
-            aboutmebox.style.display = 'none';
-            pastbox1.style.display = 'none';
-            processdiv.style.display = 'none';
-            pastbox2.style.display = 'none';
-            projectsbox.style.display = 'flex';
+            developmentbox.style.display = 'flex';
             filesbox.style.display = 'none';
         }
         function files() {
             homebox.style.display = 'none';
             aboutmebox.style.display = 'none';
-            pastbox1.style.display = 'none';
-            processdiv.style.display = 'none';
-            pastbox2.style.display = 'none';
-            projectsbox.style.display = 'none';
+            developmentbox.style.display = 'none';
             filesbox.style.display = 'flex';
         }
+
+
+        function past() {
+            pastbox.style.display = 'flex';
+            projectsbox.style.display = 'none';
+            presentbox.style.display = 'none';
+            futurebox.style.display = 'none';
+            processdiv.style.display = 'none';
+        }
+        function present() {
+            pastbox.style.display = 'none';
+            projectsbox.style.display = 'none';
+            presentbox.style.display = 'flex';
+            futurebox.style.display = 'none';
+            processdiv.style.display = 'flex';
+        }
+        function projects() {
+            pastbox.style.display = 'none';
+            projectsbox.style.display = 'flex';
+            presentbox.style.display = 'none';
+            futurebox.style.display = 'none';
+            processdiv.style.display = 'none';
+        }
+        function future() {
+            pastbox.style.display = 'none';
+            projectsbox.style.display = 'none';
+            presentbox.style.display = 'none';
+            futurebox.style.display = 'flex';
+            processdiv.style.display = 'none';
+        }
+
+
+        function previousslide() {
+            refslide = refslide - 1;
+            showslide();
+        }
+
+        function nextslide() {
+            refslide = refslide + 1;
+            showslide();
+        }
+
+        function showslide() {
+            if (refslide == 1) {
+                ref1.style.display = 'flex';
+                ref2.style.display = 'none';
+                ref3.style.display = 'none';
+            }
+            if (refslide == 2) {
+                ref1.style.display = 'none';
+                ref2.style.display = 'flex';
+                ref3.style.display = 'none';
+            }
+            if (refslide == 3) {
+                ref1.style.display = 'none';
+                ref2.style.display = 'none';
+                ref3.style.display = 'flex';
+            }
+            if (refslide > 3) {
+                refslide = 3;
+            }
+            if (refslide < 1) {
+                refslide = 1;
+            }
+        }
+
+        // function CA() {
+            
+        // }
+        // function MDC() {
+            
+        // }
+        // function TR() {
+            
+        // }
+        // function US() {
+            
+        // }
+        // function BE() {
+            
+        // }
+
 
 
     </script>
