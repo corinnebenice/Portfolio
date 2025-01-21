@@ -21,6 +21,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* ----------------------- POPUP ---------------------- */
+
+        #popup {
+            position: absolute;
+            display: flex;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+
+        #popupbox {
+            display: flex;
+            margin-top: 10%;
+            width: 500px;
+            height: 400px;
+            background-color: #363636;
+            color: #ffffff;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        #popuptext {
+            flex-wrap: wrap;
+            display: flex;
+            font-family: "Inter", serif;
+            font-size: 15px;
+            font-weight: 300;
+            width: 300px;
+            text-align: center;
+            justify-content: center;
+        }
+
+        #closebutton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #363636;
+            color: #ffffff;
+        }
+
+        #closebutton:hover {
+            background-color: #5e5e5e;
+            transition: background-color 0.3s;
+        }
+
+
         /* ----------------------- REGULAR ---------------------- */
         body {
             position: relative;
@@ -434,18 +484,20 @@
             margin-bottom: 200px;
         }
 
+        #titlesources {
+            margin-top: 100px;
+        }
+
+        #textsources {
+            text-align: end;
+        }
+
 
         /* ----------------------- PROJECTS ---------------------- */
 
         #menubox3 {
             display: flex;
             flex-wrap: nowrap;
-        }
-
-        .textblock {
-            width: 100%;
-            background-color: #4e4e4e;
-            color: #ffffff;
         }
 
         #projectsbox {
@@ -478,10 +530,19 @@
             flex-grow: 1;
             margin: 0;
             margin-top: -2px;
-            /* padding-left: 20px; */
             align-content: center;
             z-index: 10;
             transition: background-color 0.3s, color 0.3s;
+        }
+
+        .projecttext {
+            display: flex;
+            max-height: 0;        /* Collapsed by default */
+            overflow: hidden; 
+            visibility: hidden;
+            transition: max-height 0.5s ease;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .projectlist:hover {
@@ -496,83 +557,144 @@
             transition: opacity 0.3s ease, visibility 0s;
             /* Smooth transition */
         }
-
-        #project2:hover~#p2 {
+                #project1:hover~#textp1  {
             visibility: visible;
             opacity: 1;
-            transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+        #project2:hover~#textp2  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+        #project3:hover~#textp3  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+        #project4:hover~#textp4  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project5:hover~#textp5  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project6:hover~#textp6  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project7:hover~#textp7  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project8:hover~#textp8  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project9:hover~#textp9  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project10:hover~#textp10  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project11:hover~#textp11  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                #project12:hover~#textp12  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
+        }
+                        #project13:hover~#textp13  {
+            visibility: visible;
+            opacity: 1;
+            max-height: 400px;
+            transition: max-height 0.5s ease;
         }
 
-        #project3:hover~#p3 {
+        /* #project3:hover~#p3 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project4:hover~#p4 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project5:hover~#p5 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project6:hover~#p6 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project7:hover~#p7 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project8:hover~#p8 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project9:hover~#p9 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project10:hover~#p10 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project11:hover~#p11 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
 
         #project12:hover~#p12 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
-        }
+        } */
 
         .hoverpages {
             visibility: hidden;
@@ -608,13 +730,13 @@
         #img4 {
             position: absolute;
             top: 60%;
-            left: 75%;
+            left: 85%;
         }
 
         #img5 {
             position: absolute;
             top: 60%;
-            left: 75%;
+            left: 90%;
         }
 
         #img6 {
@@ -647,22 +769,31 @@
             <div id="notedevelopment" class="hoverpages"><p class="notetext">Here I write about my development trajectory; my goals & what I did (past), how I work (present), and my next plans (future).</p></div>
             <div id="notefiles" class="hoverpages"><p class="notetext">Here you can find the references of the text, and the relevant deliverables and files of my work if you want to have a more detailed look.</p></div>    
         </div>
+    </div>
+
+    <div id="popup">
+        <div id="popupbox">
+            <div id="popuptext">
+            <p>Dear visitor, </p> <p>I designed and coded this portfolio myself from scratch. To experience the webpage as I intended, please
+            visit the website through a laptop or computer (not a phone or tablet). Thank you deerly.</p>
+            <p>Cheers, Nikki</p></div>
+            <button id="closebutton" onclick="closebox()">x</button>
+        </div>
         
- </div>
+    </div>
 
     <div id="content">
 
         <div id="homebox" style="display: none;">
-            <p id="titlehome1" class="notetext">Welcome to my portfolio!</p>
-            <p id="sentencehome" class="title">I am a sensitive data-designer that combines intuition and philosophy
-                with data, technology & code, to speculate about alternatives on the future everyday. </p>
+            <p id="titlehome1" class="notetext">Hi, I am Nikki. Welcome to my portfolio!</p>
+            <p id="sentencehome" class="title">I am a <b>sensitive data-designer</b> that combines <b>intuition</b> and <b>philosophy</b>
+                with <b>data, technology & AI</b>, to speculate about <b>alternatives</b> on the <b>future everyday</b>. </p>
             <p id="titlehome2" class="notetext">You can read about this on the <a href="javascript:aboutme()">ABOUT
                     ME</a> page.</p>
 
             <p id="titlehome2" class="notetext">If you want to know how I got there and how I like to work, check
                 out the <a href="javascript:development()">DEVELOPMENT</a> page. Here I showcase my projects too, as
-                they demonstrate my skills and I explain
-                how they contributed to my development.
+                they demonstrate my skills and I explain how they contributed to my development.
             </p>
             <p id="titlehome2" class="notetext">And if you want to ‘get freaky’ in the details, download my
                 deliverables on the <a href="javascript:files()">FILES AND REFERENCES</a> page.</p>
@@ -671,75 +802,62 @@
         <div id="aboutmebox" style="display: none;">
             <h1 id="titlevision" class="title">Vision</h1>
             <div id="textvision" class="normaltext">
-                <p> In our world, more web pages, digital tools, algorithms, and data
-                    points are born than people. We need to learn to live together with this digital species (the
-                    ‘technology’ collective). We need to learn to collaborate, but in this, not forget our human
-                    strengths:
-                    we should let intuition and data collaborate. Going from probabilities to possibilities, from logic
-                    to
-                    wisdom, and let our algorithms and emotions collaborate.</p>
-                <p>I believe living in such a world is possible. However, it does require the necessary changes, of
-                    which
-                    most within our attitude and mind-set. Through our designer skills, creating experiences and
-                    artifacts,
-                    we invite our public into our ideas and visions. I want to allow ‘normal people’ to fantasize and
-                    dream,
-                    to dive deep into an engaging story and let their mind wander freely within that world. I believe
-                    this
-                    can be done through speculative design and design fiction. By closing the gap between reality and
-                    fiction, I want to allow people to dream and ‘think big’ again, to think of life as if we could
-                    change
-                    it. Just like I believe we actually can.</p>
-                <p>I believe to design is to be a pragmatist. Derived from the work of William James [X], some important
-                    theories of pragmatism are radical empiricism (the relation between things and the things themselves
-                    form an experience), pluralism (there is no one truth), anti-absolutism (there is no truth already
-                    ‘out
-                    there’ for us to discover), and habits of action (beliefs are not static but are put into action).
-                    In design work, this results in 3 core principles:</p>
-                <p>There should be equal emphasis on the things that actually are, as how we experience them.
-                    We should understand the temporality of life and embrace constant change; leave room for complexity
-                    and
-                    ambiguity, and keep questioning the things that we already think we understand.</p>
-                <p>Stay pragmatic, stay in the here and now; see actions and habits as mechanisms of the metaphysical,
-                    and
-                    act using the same language. Produce practical tools that play to our bodily experiences.</p>
-                <p>So, to talk about alternative positions of the future, we should tinker and experiment with what’s
-                    around us. Make it physical and experiential.</p>
-                <p>As a designer, I aim to leave room for wonder, magic, and spirituality in this world full of
-                    technology.
-                    I believe design is much more than ‘making’; it is ‘making things possible’ [X].</p>
+                <p> We check an app to see if we have slept well, we have more friends in our online community than around us, and we look
+                more often at nature digitally than that we spend in it. — We live in a world where technology and digitalization is
+                starting to overtake our human essence. Our society takes a monetizing and maximalising attitude, overvaluing the
+                technological while dismissing the subtle depth and quality of being human.</p>
+                <p>I see a future in which our worries of loosing jobs to AI are valid, as we have set up a structure in which human
+                qualities are not valued anymore; we are chasing technology’s qualities of being efficient, fast, precise and accurate.
+                But, we still have the opportunity to steer away from this future. It is not too late to think about and work towards
+                alternative futures.</p>
+                <p>This is where I believe my purpose as designer comes in. I believe as designer I am able to design solutions that follow
+                alternative societal perspectives, but am also capable of inspiring others to do so too. By using design as a
+                transformational tool, I create moments of friction that encourage people to step out of “the way things are”,
+                highlighting the structures of today. Only by stepping out and seeing things from a new perspective, can we as humans
+                think freely and see alternative ways, allowing us to picture and work towards a different, better future.</p>
+                <p>In this pursuit, I am guided by the philosophy of Pragmatism by William James [11]. Through a pragmatic attitude, I have
+                learnt to see the world from a pluralist, dynamic and interconnected perspective. We are not discovering a fixed
+                reality, but co-create it every day, just like our beliefs and the world moulded by it.</p>
+                <p>In my design work, this results in 3 core principles:</p>
+                <ol>
+                    <li>We should understand the volatility of life and embrace constant change; leave room for complexity and ambiguity, and
+                    keep questioning the things that we already think we understand.</li>
+                    <li>Stay pragmatic, stay in the here and now. See actions and habits as mechanisms of the metaphysical, and act using the
+                    same language: produce practical tools that play with our bodily experiences. There should be equal emphasis on the
+                    tangible realities as how we experience them. Personal and emotional experience is valuable.</li>
+                    <li>Don’t be afraid to break rules and do things differently, stepping away from principles.</li>
+                </ol>
+                <p>My goal as a designer is to create friction, spark awareness and, ultimately, inspire a recalibration of our
+                relationship with technology. Because for me, design is more than “making”—it is “making things possible.” [3]</p>
             </div>
             <h1 id="titleidentity" class="title">Professional Identity</h1>
             <div id="textidentity" class="normaltext">
-                <p>I am a sensitive data-designer that combines intuition and
-                    philosophy with data, technology & code, to speculate about alternative perspectives on the future
-                    everyday.</p>
-                <p> I grew up in a household of Ying and Yang. Where my mom would relief my stomach aches by ‘pulling it
-                    out’ with her hands and taught me that energies can be steered to manifest your desires, my dad
-                    would
-                    help me pick apart objects to figure out their internal workings and taught me that everything in
-                    life
-                    can be explained and everything lives in matter.</p>
-                <p> This has led to a duality that I have felt throughout my whole life. Where on the one side I am
-                    practical, analytical, and scientific, I on the other side love to get lost in mythical stories,
-                    highly
-                    value art and social practices, and partake in philosophical discussion. Being raised by parents
-                    that
-                    clearly embody both one of these characters, I have always felt that I had to choose between these
-                    two
-                    forms of being. But today I am starting to learn that we can combine the two, let them co-exist.</p>
-                <p>As a designer, I aspire to let intuition and rationale collaborate. Where can sensitivity and
-                    intuition
-                    be part of data analysis? How can code and data speak to emotions and become spiritual? I am now
-                    learning to see where they can be combined and empower each other, where the aesthetics of
-                    intelligence
-                    can be found [X].</p>
-                <p> In this, I use methodologies that strongly rely on Creativity and Aesthetics, and work with data and
-                    computing tools deriving from the Math, Data and Computing field. In my work as a designer, I aim to
-                    implement both powers through sensitivity and practicality; creating things with hardware, software,
-                    philosophy, and speculations. I aim to leave room for ambiguity and complexity, while providing
-                    concrete
-                    (technical) tools and products.</p>
+                <p>I grew up in a household of Yin and Yang. Where my mom would relief my stomach aches by ‘pulling it out’ with her hands
+                and taught me that thinking and believing can manifest real changes, my dad would help me pick apart objects to figure
+                out their internal workings and taught me that everything in life can be explained and all answers lives in matter.
+</p>
+                <p>Embodying both forms of being in myself, I have become both the engineer and the philosopher. Where in the past I mostly
+                felt them as a duality, feeling like I have to choose between the two, I am now learning that they can co-exist. I have
+                learned that both of these roles have their own strengths, and deserve their own placement in the design process.
+                Embracing the qualities of both.
+</p>
+                <p> In my work, the philosopher side of me really thrives in the start of the project; it thrives on exploring friction,
+                guiding the inquiry through (collective) experiences, and focusing on deeper meaning. The skills I have that belong here
+                are post phenomenological analysis, user involvement, analysing quality of interaction, and integrating creative
+                processes.
+</p>
+                <p>The engineer in me gets room once the initial questions are set, bringing it back to the here and now. The fact that I
+                can build high quality prototypes, design for data collection and perform analysis, allow me to implement a pragmatic
+                approach that uses material and real interactions to study the chosen phenomena [11].
+                The philosopher is the drive behind the project process; steering on user involvement and experimentation. The engineer
+                provides the tools, the enthusiasm for making and the deep dive.
+</p>
+                <p>The challenge lies in the balancing of these roles; going too philosophical can lead to projects that never ‘land’, or
+                never give something concrete to work with; staying too much in engineering role can make the project ‘flat’ by becoming
+                too solution focused, losing the vision behind it all.
+</p>
+<p>So, as a designer, I aspire to let these two roles collaborate. Because only together can they reach true value; going
+from algorithm to intuition, from probabilities to possibilities, and logic to wisdom.</p>
             </div>
             <div id="imgidentity" class="hoverpages">
                 <img id="imgbuild" src="nikkibuild.JPG" width="400px">
@@ -813,67 +931,34 @@
                 </p>
 
                 <h1 id="titlepast" class="title">Past</h1>
-                <p id="textpast" class="normaltext">Before my masters, I completed the bachelors of Industrial Design at
-                    the TU/e as well.
-                    During my bachelors, I did an <a href="javascript:imgproject1()">internship</a> at Design Agency
-                    MMID in
-                    Delft [X]. In this internship, I was
-                    looking explicitly to develop my hard skills and wanted to learn more about the ‘finalizing’ and end
-                    stages of designing, something that I really missed in my education at the time. The internship
-                    could
-                    very well provide me in this, however I learned that while very interesting, the skills and
-                    processes
-                    closer to releasing a product were not the ones I felt like I should develop further in. I learned
-                    to
-                    value the skills I developed at Eindhoven, which when talking about product development stage belong
-                    more to the front-end, even more than I had before. Specifically, I am talking about critical
-                    thinking,
-                    unraveling conceptual and contextual complexity, approaching design from a visionary and
-                    transforming
-                    standpoint. Those were the attributes I had as a designer that made me stand out at MMID, and that
-                    made
-                    me capable of adding something valuable to the projects there.
+                <div id="textpast" class="normaltext">
+                    <p>Before my masters, I completed the bachelors of Industrial Design at the TU/e. During my bachelors, I did an internship
+                    at design agency MMID in Delft [8]. While wanting to learn more about the ‘finalizing stages’ of product design,
+                    something that I missed in my education at the time, I quickly realized that the front-end skills that I already
+                    developed were actually the ones that made me stand out at the company.</p>
+                    <p>While continuing at MMID, first part-time during my FBP and full-time after graduating, I learned that my value lay in
+                    the skills I developed at Eindhoven, specifically critical thinking, unravelling conceptual and contextual complexity,
+                    and approaching design from a visionary and transformative mindset.
+                    This is what made me want to pursue the masters; I felt like the TU/e offered the environment, knowledge and methodology
+                    to dive deeper into these skills. Next to this, my experience of working in the industry reinforced my appreciation for
+                    the opportunities the academic world provides. It allowed me to still focus on my personal development, work on projects
+                    without financial or market interests, and left room for both deep and broad experimentation and explorations.
+</p><p>This mentality is also seen back in my development focus within my masters. Throughout my courses and projects, I worked
+a lot within speculative design and design friction approaches [2], believing that in that way Creativity & Aesthetics
+can help me bring philosophical and sensitive qualities forwards in my work. Wanting to become a visionary designer about new technologies, I wanted to develop my Math, Data and Computing skills of
+working with data and code as well, learning to apply both knowledge and tools of this sector.
 
-                    After my bachelors I continued to work at MMID, first part-time during my FBP and after graduating
-                    full-time. In this experience, I liked the projects most where I could contribute conceptually and
-                    visionary, working on the bigger picture of the project.
-                    This is in the end why I ended up choosing to pursue my masters at the TU/e as well; I felt that
-                    those
-                    things I valued most about my work were very ‘TU/e-style’, and I saw the infancy of it, feeling that
-                    I
-                    could still learn so much on this topic in the masters ID.
-                    Next to this, my experience of working in the industry reinforced my appreciation for the
-                    opportunities
-                    the academic world provides. It allowed me to still focus on my personal development, work on
-                    projects
-                    without financial or market interests, and left room for both deep and broad experimentation and
-                    explorations.
-
-                    This mentality is also seen back in my development focus within my masters. Throughout my courses
-                    and
-                    projects, I worked a lot within the speculative design [X] and design friction [X] realm, something
-                    that
-                    mostly lives within the academic world. I think within these design approaches, exactly the skills
-                    and
-                    attitudes that I valued as designer come forward strongly, enabling me to develop myself within.
-                    Next to this learning focus within Creativity and Aesthetics, I also wanted to develop myself within
-                    the
-                    Math, Data and Computing expertise area. While mostly driven by my enjoyment in working with code
-                    and
-                    data, and interests in new technologies, there was also an industry aspect here. Skills within this
-                    area
-                    will only grow in the upcoming years, giving me a stronger position on the market after graduating.
-
-                    So, in my masters I set out to investigate where and how an integration between these two aspects
-                    can
-                    exist; critical and visionary design, and working with data and computing techniques. The course
-                    ‘Creativity and aesthetics of data and AI’ couldn’t be more perfect. Seeing the application of
-                    futuring
-                    and working with MDC-focused tools like LLMs and ML, was eye opening. Throughout my masters, I kept
-                    referring my work to the aesthetics of intelligence introduced in the course [X].
-                    When coming closer to graduating, new development questions arose; I know I like doing this
-                    speculative-design-friction work, but how does that receive a space in the industry?
-                </p>
+</p>
+<p>So, in my masters I set out to investigate to develop both expertise areas individually, and where and how an
+integration between these two aspects can exist; critical and visionary design, and working with data and computing
+techniques. I wanted to learn how futuring and speculation can work together with tools like LLMs and ML, and how
+intelligence can show attributes of aesthetics [12], to be able to apply this in my own work.
+</p>
+<p>Next to this, a second development track arose during my master’s; how does this type of work receive a space in the
+industry? To get a feel for this, I wanted to use my M2.1 option to find a company for a project collaboration, hoping
+to get a feel for the application and value of my skills in a real-industry setting.
+</p>
+                </div>
             </div>
 
             <div id="projectsbox" style="display: none;">
@@ -892,9 +977,18 @@
                     <button class="menu3" id="selector4" onclick="BE()">B&E</button>
                 </div> -->
 
-                <h1 id="project1" class="projectlist title_smaller">Final Master Project - Spiritual Technology:
-                    Designing
-                    Space for Spirituality in the Everyday</h1>
+                <h1 id="project1" class="projectlist title_smaller">Final Master Project - Spiritual Technology: Designing Space for Spirituality in our Everyday Life (FMP)</h1>
+                                    <div id="textp1" class="projecttext">
+                                        <p class="normaltext">This final master project aims to create space for the spiritual aspects of our lives in our everyday, by designing with
+                                        spirituality as a value for technology. Through an experiment with 5 participants I collaboratively unraveled their
+                                        personal meaning of spirituality and designed situated probes for each, resulting in the identification of three
+                                        qualities of spiritual technology; soulmating, ritualizing, and constraigency.</p>
+                                        <p class="normaltext">The project demonstrates my skills in building high quality prototypes with hardware and software to enable it to
+                                        collect and control data during a remote deployment. Furthermore it shows how I design with and for the user and how I
+                                        apply explorative research techniques to make a societal statement in the forms of a manifesto.</p>
+                                    
+                                        <p class="small_text">Acknowledgements: Clever°Franke</p>
+                                    </div>
                 <div id="p1" class="hoverpages">
                     <img id="img1" src="FMP1.JPG" width="200px">
                     <img id="img2" src="FMP2.JPG" width="300px">
@@ -903,12 +997,20 @@
                 </div>
 
                 <hr width="100%" style="margin: 0%;">
-                    <h3 id="project2" class="projectlist title_smaller">Data Enabled Design</h3>
-                    <div id="textp2" class="textblock" style="display: none;"><p class="small_text">This course introduces the Data Enabled Design methodology [X], and with my group we applied this to study the behavior of people in their living space with a focus on mental health. Through first researching the context of behavior in a specific setting with sensor probes and data collection, we then, in the informed step, intervene the setting with an adjustable light design.</p>
-                    <p class="small_text">This course demonstrates my skills within prototyping and the integration of software and hardware that enables remote data collection. Furthermore it demonstrates both qualitative and quantitative data analysis, and how they are combined within the inquiry, to then show how these data insights drive the design choices in the project.</p>
-                    <p class="small_text">The development of these skills allowed me to integrate the collection and analysis of (quantitative) data, for example in my FMP. It established a familiarity with integrating DataFoundry and using OOCSI, making me more easily apply these tools in other projects. This allowed me to come closer to my desired identity as designer; becoming a data designer that integrates data science in her process.
-                    </p>
-                    <p class="small_text">Acknowledgements: Niels Winkelman, Naixin Liu, Latisha Boor</p>
+                    <h3 id="project2" class="projectlist title_smaller">LivingLight - Data enabled design (DED)</h3>
+                    <div id="textp2" class="projecttext">
+                        <p class="normaltext">This course introduces the Data Enabled Design methodology [9, 10], and with my group we applied this to study the
+                        behavior of people in their living space with a focus on mental health. Through first researching the context of
+                        behavior in a specific setting with sensor probes and data collection, we then, in the informed step, intervene the
+                        setting with an adjustable light design.</p>
+                        <p class="normaltext">This course demonstrates my skills within prototyping and the integration of software and hardware that enables remote
+                        data collection. Furthermore it demonstrates both qualitative and quantitative data analysis, and how they are combined
+                        within the inquiry, to then show how these data insights drive the design choices in the project.</p>
+                        <p class="normaltext">The development of these skills allowed me to integrate the collection and analysis of (quantitative) data, for example
+                        in my FMP. It established a familiarity with integrating DataFoundry and using OOCSI, making me more easily apply these
+                        tools in other projects. This allowed me to come closer to my desired identity as designer; becoming a data designer
+                        that integrates data science in her process.                         </p>
+                        <p class="small_text">Acknowledgements: Niels Winkelman, Naixin Liu, Latisha Boor</p>
                     </div>
                 <div id="p2" class="hoverpages">
                     <embed id="img5" src="DED1.pdf" type="application/pdf" width="200px" />
@@ -916,7 +1018,20 @@
                     <embed id="img7" src="DED3.pdf" type="application/pdf" width="200px" />
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project4" class="projectlist title_smaller">Matters of Transformation</h3>
+                <h3 id="project3" class="projectlist title_smaller">Design for Guests - Matters of Transformation (MoT)</h3>
+                                    <div id="textp3" class="projecttext">
+                                        <p class="normaltext">This course applies philosopher William James’ ideas on pragmatism [11]; our habits and actions are manifestations of
+                                        our beliefs and values, making us approach design as material for philosophy [3], in this course to ‘design for guests’.
+                                        In this project I develop 4 material designs in which I explore and finally illustrate the complexities of change, and
+                                        how we can be a host for change.</p>
+                                        <p class="normaltext">This work demonstrates my philosophical attitude in design, in which I go beyond seeing design as solution, and use it
+                                        to understand socio-cultural and human complexities. The work demonstrates reflection in action by thinking through
+                                        making, and how design can be sensitive and the importance of experience ability.</p>
+                                        <p class="normaltext">The developments of these skills contributed to my FMP and helped formulate my design vision. It provided me with an
+                                        attitude, theories and methodologies that I believed could help me realize my vision. It shaped the ‘how’.
+                                        </p>
+                                       
+                                    </div>
                 <div id="p3" class="hoverpages">
                     <img id="img1a" src="FMP1.JPG" width="200px">
                     <img id="img2a" src="FMP2.JPG" width="300px">
@@ -924,7 +1039,22 @@
                     <img id="img4a" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project3" class="projectlist title_smaller">M2.1 - CLEVER°FRANKE</h3>
+                <h3 id="project4" class="projectlist title_smaller">M2.1 - An Exploration of the World’s Forests through Data Visualization - CLEVER°FRANKE</h3>
+                                                    <div id="textp4" class="projecttext">
+                                                        <p class="normaltext">This project, in collaboration with Clever°Franke, is about learning about data visualization by applying the Purpose
+                                                        Map framework [1], and uses the experiences of doing as inquiry to reflect on the framework. It results in 4 data
+                                                        visualizations that I use to demonstrate that 1) data visualization is very diverse, and 2) different perspectives and
+                                                        stories can be generated from the same dataset.</p>
+                                                        <p class="normaltext">This project demonstrates my collaborative skills, and my tremendous growth within data-design, both in skills (data
+                                                        analysis, creative coding with data, turning insights into a story) and knowledge (how to do design data visualization
+                                                        for different purposes, applying the purpose map framework).</p>
+                                                        <p class="normaltext">The development of these skills made it more natural to me to integrate data exploration and visualization in my
+                                                        projects, and more importantly, provided a CA perspective on top of that; aesthetics of data and how visualization
+                                                        attributes can express qualities. This brought me closer to my goal of combining MDC and CA.
+
+                                                        </p>
+                                                    <p class="small_text">Acknowledgements: Clever°Franke</p>
+                                                    </div>
                 <div id="p4" class="hoverpages">
                     <img id="img1b" src="FMP1.JPG" width="200px">
                     <img id="img2b" src="FMP2.JPG" width="300px">
@@ -932,7 +1062,18 @@
                     <img id="img4b" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project5" class="projectlist title_smaller">Let's make Humans Better</h3>
+                <h3 id="project5" class="projectlist title_smaller">What gets counted counts - Let’s Make Humans Better: Enhancement, Technology & Transhumanism</h3>
+                                                    <div id="textp5" class="projecttext">
+                                                        <p class="normaltext">This course comes from the department of Industrial Engineering and Innovation Sciences, and applies ethics on new and
+                                                        upcoming technologies. In the course moral discussions were held and we practiced to ground speculations on societal and
+                                                        ethical complications of future technology.</p>
+                                                        <p class="normaltext">My final delivered essay demonstrates my skills in ethical and social analysis, and how I am both capable and interested
+                                                        in analysing and criticizing future technologies. It has provided me with techniques to use existing knowledge to ground
+                                                        speculation.</p>
+                                                        <p class="normaltext">The development of these skills helped me in taking critical-societal standpoints (for example in my FMP), as I got
+                                                        better at analysing these complexities taking a position within.</p>
+                                                     
+                                                    </div>
                 <div id="p5" class="hoverpages">
                     <img id="img1c" src="FMP1.JPG" width="200px">
                     <img id="img2c" src="FMP2.JPG" width="300px">
@@ -940,7 +1081,18 @@
                     <img id="img4c" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project6" class="projectlist title_smaller">M1.2 - On the future of Dataism</h3>
+                <h3 id="project6" class="projectlist title_smaller">M1.2 - Speculative Design Research; a First Inquiry</h3>
+                                                    <div id="textp6" class="projecttext">
+                                                        <p class="normaltext">In this research project, I dive into the challenge of speculative design, with the aim of generating discussion around
+                                                        Dataism [14]. I use my design products and process and its struggles to analyze the exact difficulties of designing
+                                                        future scenarios, and aim to inspire future speculative designers to take the challenge.</p>
+                                                        <p class="normaltext">This project demonstrates my research skills and application of speculative design, combined in a showroom experience
+                                                        [4]. On a higher level, it demonstrates my reflective skills and how I apply them to frame my inquiries and shape a
+                                                        message.</p>
+                                                        <p class="normaltext">The development of these skills contributed to becoming the designer of my vision, by giving me more experience with
+                                                        speculative work methodologies, allowing me to apply it more easily in the future.</p>
+                                                    
+                                                    </div>
                 <div id="p6" class="hoverpages">
                     <img id="img1d" src="FMP1.JPG" width="200px">
                     <img id="img2d" src="FMP2.JPG" width="300px">
@@ -949,6 +1101,18 @@
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project7" class="projectlist title_smaller">M1.1 - Track.(ID)</h3>
+                                                    <div id="textp7" class="projecttext">
+                                                        <p class="normaltext">In this group project we designed an activity-tracking tool that provides live visualizations of performed design
+                                                        activities on a timeline, to support documentation and reflection for design students. The tool is the result of a
+                                                        process starting from an interest in designer-AI collaboration, which moved towards project tracking resulting from the
+                                                        hands-on data-guided approach.</p>
+                                                        <p class="normaltext">This project demonstrates my skills within data processing and visualization in Jupyter, specifically used as
+                                                        exploration. Furthermore it shows user involvement and follow up, demonstrating how I am able to integrate the user
+                                                        throughout the design process.</p>
+                                                        <p class="normaltext">The development of these skills gave me a toolset that helped me apply DED principles in later projects more easily,
+                                                        therefore allowing MDC to be more integrated in my work.</p>
+                                                    <p class="small_text">Acknowledgements: Jelmer Braamskamp, Maas Goudswaard, Leqi Wang</p>
+                                                    </div>
                 <div id="p7" class="hoverpages">
                     <img id="img1e" src="FMP1.JPG" width="200px">
                     <img id="img2e" src="FMP2.JPG" width="300px">
@@ -956,7 +1120,18 @@
                     <img id="img4e" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project8" class="projectlist title_smaller">Interactional Morality</h3>
+                <h3 id="project8" class="projectlist title_smaller">Eindhoven, Grow up! - Interactional Morality</h3>
+                                                                    <div id="textp8" class="projecttext">
+                                                                        <p class="normaltext">This course covered the meaning of morality both individually and at societal level, using the format of a manifesto to
+                                                                        critically assess future-oriented and current scenarios of our intimate relationships with technology. This resulted in
+                                                                        the writing and performing of a manifesto individually with the title ‘My data does not represent me’, and a group
+                                                                        report highlighting the position Eindhoven as a municipality has and could take in the future towards homelessness.</p>
+                                                                        <p class="normaltext">This work demonstrates my skills in analyzing socio-cultural and societal settings, and designing demonstrations and
+                                                                        experiences to provoke and share criticality.</p>
+                                                                        <p class="normaltext">The development of these skills allowed me to do projects within the speculative and criticizing realm, by being able to
+                                                                        position myself societally, and design the experiences to create the emotional response I intended it to.</p>
+                                                                        <p class="small_text">Acknowledgements: Floris Beekman, Nicolaas Romagnoli, Rosa van Wershoven, Wenhao Yu</p>
+                                                                    </div>
                 <div id="p8" class="hoverpages">
                     <img id="img1f" src="FMP1.JPG" width="200px">
                     <img id="img2f" src="FMP2.JPG" width="300px">
@@ -964,7 +1139,17 @@
                     <img id="img4f" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project9" class="projectlist title_smaller">Constructive Design Research</h3>
+                <h3 id="project9" class="projectlist title_smaller">Mirroring the Data - Constructive Design Research (CDR)</h3>
+                                                                                    <div id="textp9" class="projecttext">
+                                                                                        <p class="normaltext">This course resulted in a showroom [4]; research aimed to confront designers, by demonstrating how their approach with
+                                                                                        data can influence design outcomes, through a workshop called ‘the unknown user’, in which two groups of designers had
+                                                                                        to design based on the same open-source data of an anonymous Fitbit user.</p>
+                                                                                        <p class="normaltext">This project demonstrates my skills in thematic analysis of qualitative data, and the usage of quantitative data
+                                                                                        analysis and visualization in Jupyter.</p>
+                                                                                        <p class="normaltext">The development of these skills made it more and more natural to integrate user involvement in my projects, by being
+                                                                                        very familiar with the necessary tools and methodologies.</p>
+                                                                                        <p class="small_text">Acknowledgements: Dana Starmans, Pauline Vaandrager</p>
+                                                                                    </div>
                 <div id="p9" class="hoverpages">
                     <img id="img1g" src="FMP1.JPG" width="200px">
                     <img id="img2g" src="FMP2.JPG" width="300px">
@@ -972,7 +1157,20 @@
                     <img id="img4g" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project10" class="projectlist title_smaller">Designerly Perspective on IoT</h3>
+                <h3 id="project10" class="projectlist title_smaller">JamBlocks - Designerly perspective on IoT</h3>
+                                                                                    <div id="textp10" class="projecttext">
+                                                                                        <p class="normaltext">In this course, I explored alternatives to the design of IoT systems in a group setting. In this, we focused on rich and
+                                                                                        physical interactions, and adopted a ‘growing systems’ approach [5]; we designed and prototyped a module-based interface
+                                                                                        that is able to adopt new features and combine existing ones to create emerging features.</p>
+                                                                                        <p class="normaltext">
+                                                                                        This course demonstrates my skills in prototyping high quality demonstrators, and how I look for quality in interactions
+                                                                                        on a deeper level, applying rich interaction [6].
+                                                                                        </p>
+                                                                                        <p class="normaltext">The development of these skills helped me become a better prototyper, seeking more complex qualities of interaction and
+                                                                                        manifestation of values within form and features. This brought me closer to becoming the designer I describe in my
+                                                                                        vision, as it gave me more skills in designing experiences and prototypes that can provoke and tell stories.</p>
+                                                                                        <p class="small_text">Acknowledgements: Teun Schutten, Hongbin Su</p>
+                                                                                    </div>
                 <div id="p10" class="hoverpages">
                     <img id="img1h" src="FMP1.JPG" width="200px">
                     <img id="img2h" src="FMP2.JPG" width="300px">
@@ -980,7 +1178,21 @@
                     <img id="img4h" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project11" class="projectlist title_smaller">Creativity and Aesthetics of Data and AI</h3>
+                <h3 id="project11" class="projectlist title_smaller">Shapeshift - Creativity & Aesthetics of Data & AI</h3>
+                                                                                    <div id="textp11" class="projecttext">
+                                                                                        <p class="normaltext">In this course, with my group, I have created an experiential demonstrator of a company that sells add-ons to alter your
+                                                                                        Digital Twin to become more like you, to highlight the beauty and ugliness of a possible near-future where personal
+                                                                                        digital twins are the standard.</p>
+                                                                                        <p class="normaltext">
+                                                                                            The course was for me the perfect fit for my development; demonstrating how data and AI technologies (MDC) can have
+                                                                                            aesthetic qualities (CA). It demonstrates my skills in design futuring, showing the application of speculative
+                                                                                            positioning [13], in combination with knowledge and use of algorithms and AI (specifically, LLMs and digital twins).
+                                                                                        </p>
+                                                                                        <p class="normaltext">The development of these skills are directly linked to my learning intentions within my masters and contributed to
+                                                                                        finding my vision and giving me frameworks and theories (e.g. aesthetics of intelligence [12]) that enabled me to apply
+                                                                                        it within my projects.</p>
+                                                                                        <p class="small_text">Acknowledgements: Mats Erdkamp, Joris Lodewijks, Davide Stefani, Thijs de Koning</p>
+                                                                                    </div>
                 <div id="p11" class="hoverpages">
                     <img id="img1i" src="FMP1.JPG" width="200px">
                     <img id="img2i" src="FMP2.JPG" width="300px">
@@ -988,13 +1200,51 @@
                     <img id="img4i" src="FMP4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmelia Sensis</h3>
+                <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmellia Sensis (FBP)</h3>
+                                                                                    <div id="textp12" class="projecttext">
+                                                                                        <p class="normaltext">This project aimed to connect mindful practice to habitual behavior and to trigger more self-reflection to fight the
+                                                                                        disconnectedness of the world. It resulted in the design of a mindful tea-making interaction that invites and reminds us
+                                                                                        to take a moment of ‘slowing down’, caused by aspects of balance (reflecting input expressions) and playing with height
+                                                                                        differences (affordances for interactions) in the design.</p>
+                                                                                        <p class="normaltext">
+                                                                                            This project demonstrates my skills within designing aesthetics of interactions [12], zooming in on the details of all
+                                                                                            the design expressions to provoke calmth and slowing down. By having taken place during the COVID lockdown, it
+                                                                                            demonstrates my autonomy in the design process and taught me how 1st person perspective can be an important source of
+                                                                                            inquiry.
+                                                                                        </p>
+                                                                                        <p class="normaltext">The development of these skills contributed to formulating my vision, becoming more critical on the usage and role that
+                                                                                        technology plays in our everyday lives. It also gave me handles for how, as designer, I can tackle this issue, by
+                                                                                        focusing on the aesthetics of interactions and expressions of movement.</p>
+                                                                                        
+                                                                                    </div>
                 <div id="p2" class="hoverpages">
                     <img id="img1j" src="FMP1.JPG" width="200px">
                     <img id="img2j" src="FMP2.JPG" width="300px">
                     <img id="img3j" src="FMP3.JPG" width="300px">
                     <img id="img4j" src="FMP4.JPG" width="250px">
                 </div>
+                
+                <hr width="100%" style="margin: 0%;">
+                                <h3 id="project13" class="projectlist title_smaller">Creative Coding projects (extra curricular)</h3>
+                                <div id="textp13" class="projecttext">
+                                    <p class="normaltext">In creative coding, the emphasis lies on using code as a creative cool; controlling randomness, finding unexpected
+                                    outcomes, and the beauty of mistakes. In this, I work with data and mathematical rules and conditions, to provide the
+                                    boundaries of the code that visualizes the data. However through integrating randomness within a couple of parameters or
+                                    ranges, the coding tool becomes an involved agent in the creation process. For now, this work has been limited within
+                                    P5.js.</p>
+                                    <p class="normaltext">
+                                    The development of this skill allowed me to see and apply coding tools as more than realization tools, directly applying
+                                    C&A within MDC practices and tools.
+                                    </p>
+                                    <p class="small_text">Acknowledgements; Clever°Franke, Bart Simons, Francesca Bonin</p>
+                                
+                                </div>
+                                <div id="p2" class="hoverpages">
+                                    <img id="img1j" src="FMP1.JPG" width="200px">
+                                    <img id="img2j" src="FMP2.JPG" width="300px">
+                                    <img id="img3j" src="FMP3.JPG" width="300px">
+                                    <img id="img4j" src="FMP4.JPG" width="250px">
+                                </div>
 
                 <h2 class="normaltext"></h2>
             </div>
@@ -1008,55 +1258,44 @@
                     Project.</p>
 
                 <h1 id="titlepresent" class="title">Present</h1>
-                <p id="textpresent" class="normaltext">Over the years of being a designer, I have learned ‘how I work’.
-                    This
-                    means I know what I need to proceed within the process and where my strengths and weaknesses lie.
-                    I’ve learnt that I need cooperation in my projects; my creativity flows best if I can speak out
-                    loud,
-                    spar with others and continue with new ideas, inspiration and input. In order to achieve this, I
-                    organize and plan for co-creations, collaborations in projects, meetings with experts, and surround
-                    myself in collaborative environments. A clear example of this is my collaboration with C°F. I
-                    specifically looked for expertise within designing with data; enhancing my MDC skills that allow me
-                    to
-                    collect, analyse, and visualize with digital data. I continued with this collaboration in my FMP
-                    because
-                    of the fit I feel with the studio and to keep collaboration flowing through co-creation and
-                    reflection
-                    sessions with colleagues, and presenting my work in design meetups.
-                    When collaborating with others, clear communication is key. Giving clear project status update
-                    presentations to my colleagues allowed me to receive concrete and detailed feedback.
-                    Over the semesters, I have gotten better and better at this, even receiving an honorable mention in
-                    a
-                    pitch competition during the prototype-day at C°F, stating that “the only intern at C°F gave the
-                    best
-                    presentation”.
-                </p>
+                <div id="textpresent" class="normaltext">
+                    <p>Over the years of being a designer, I have learned ‘how I work’. This means I know what I need to proceed within the
+                    process and where my strengths and weaknesses lie.</p>
+
+                    <p>I’ve learnt that I need cooperation in my projects; my creativity flows best if I can speak out loud, spar with others
+                    and continue with new ideas, inspiration and input. In order to achieve this, I organize and plan for co-creations,
+                    collaborations in projects, meetings with experts, and surround myself in collaborative environments. A clear example of
+                    this is my collaboration with C°F. I specifically looked for expertise within designing with data; enhancing my MDC
+                    skills that allow me to collect, analyse, and visualize with digital data. I continued with this collaboration in my FMP
+                    because of the fit I feel with the studio and to keep collaboration flowing through co-creation and reflection sessions
+                    with colleagues, and presenting my work in design meetups.</p>
+
+                    <p>When collaborating with others, clear communication is key. Giving clear project status update presentations to my
+                    colleagues allowed me to receive concrete and detailed feedback.
+                    Over the semesters, I have gotten better and better at this, even receiving an honorable mention in a pitch competition
+                    during the prototype-day at C°F, stating that “the only intern at C°F gave the best presentation”.</p>
+
+                </div>
 
                 <h1 id="titleintegration" class="subtitle">Integration of Areas of Expertise</h1>
-                <p id="textintegration" class="normaltext">First of all, my work fully lives within the integration of
-                    MDC
-                    and CA. During my masters, my work was focused on questioning the role of technology in our everyday
-                    life, and how we can work towards a future in which spiritual aesthetics can be found in technology.
-                    Think about feeling data visualizations or speculative design on digital twins. Next to this, I make
-                    use
-                    of AI tools in the creative process, to inspire, collaborate, or bring in new perspectives, working
-                    with
-                    the Aesthetics of Intelligence [X].
+                <div id="textintegration" class="normaltext">
+                    <p>First of all, my work fully lives within the integration of MDC and CA. During my masters, my work was focused on
+                    questioning the role of technology in our everyday life, and how we can work towards a future in which spiritual
+                    aesthetics can be found in technology. Think about feeling data visualizations (M2.1) or speculative design on digital
+                    twins (Shapeshift). Next to this, I make use of AI tools in the creative process, to inspire, collaborate, or bring in
+                    new perspectives, working with the Aesthetics of Intelligence [12].</p>
+                    
+                    <p>Secondly, inspired by the work of Lee, I use “technology as our moral mirror” [7]. In my work I show notions of post
+                    phenomenology and pragmatism in design. Both these integrations require expertise in both TR and US; building prototypes
+                    and understanding technological functioning (TR) and seeing societal positioning, understanding social structures and
+                    user behavior (US). The attitude of pragmatism in design does something very similar: using making skills to
+                    philosophize, working towards an understanding for human and societal complexities.</p>
+                    
+                    <p>Lastly, throughout my design process, I integrate all the areas of expertise, each of them having their own purpose in
+                    the process. In the image below, an overview of my design process within my FMP is shown, annotated with how the role
+                    the expertise areas played throughout.</p>
 
-                    Secondly, inspired by the work of Lee, I use “technology as our moral mirror” [X]. In my work I show
-                    notions of post phenomenology and pragmatism in design. Both these integrations require expertise in
-                    both TR and US; building prototypes and understanding technological functioning (TR) and seeing
-                    societal
-                    positioning, understanding social structures and user behavior (US). The attitude of pragmatism in
-                    design does something very similar: using making skills to philosophize, working towards an
-                    understanding for human and societal complexities.
-
-                    Lastly, throughout my design process, I integrate all the areas of expertise, each of them having
-                    their
-                    own purpose in the process. In the image below, an overview of my design process within my FMP is
-                    shown,
-                    annotated with how the role the expertise areas played throughout.
-                </p>
+                </div>
             </div>
 
             <div id="futurebox" style="display: none;">
@@ -1067,49 +1306,32 @@
                 </p>
 
                 <h1 id="titlefuture" class="title">Future</h1>
-                <p id="textfuture" class="normaltext">After obtaining my Masters degree of Industrial Design, I have
-                    plans
-                    for both my professional and personal journey.
+                <div id="textfuture" class="normaltext">
+                    
+                    <p></p>After obtaining my Masters degree of Industrial Design, I have plans for both my professional and personal journey.
+                    
+                    <p>Professionally, I see myself working within a small design studio, becoming a true team member and content-designer.
+                    While I do have an eye for what is needed within a design process, how the next steps can be executed, and for making
+                    informed decisions, I do not see myself as a project manager (yet). This is because I have a big love for diving deep,
+                    staying close to the content and being able to make and create with my hands (or digital tools).
+                    While within my field of interest a PhD would be a more logical career choice, due to its academic freedom and lack of
+                    commercial drive, I think a (small) design studio is a better fit for me. Compared to a PhD, it offers more variety of
+                    work, more collaboration, and more room for the ‘messy’ side of design.</p>
+                    
+                    <p>I notice that the most important thing to me is that there is still space for my critical- philosophical attitude, and
+                    room for questioning and (playful) research. And if not always present in the work itself (which is very unlikely since
+                    this is a very luxurious position to be in), then in the process during the projects. I am therefore going to look for a
+                    company that works on storytelling, visionary installations and exhibitions, but most importantly has a company culture
+                    that encourages growth, exploration and playfulness.</p>
+                    
+                    <p>Having learned how important traveling and following ambitions also are for my personal (& professional!) development, I
+                    want to travel before fully committing to a professional career.
+                    I want to explore southern and eastern Europe by bike: connecting with nature and my surroundings, using only my own
+                    strength and a very small collection of possessions to get around. For me the challenge here lies mostly in learning to
+                    live small, and needing to connect with the environment and locals to find my way, meet new people, and have a place to
+                    stay.</p>
 
-                    Professionally, I see myself working within a small design studio, becoming a true team member and
-                    content-designer. While I do have an eye for what is needed within a design process, how the next
-                    steps
-                    can be executed, and for making informed decisions, I do not see myself as a project manager (yet).
-                    This
-                    is because I have a big love for diving deep, staying close to the content and being able to make
-                    and
-                    create with my hands (or digital tools).
-                    While within my field of interest a PhD would be a more logical career choice, due to its academic
-                    freedom and lack of commercial drive, I think a (small) design studio is a better fit for me.
-                    Compared
-                    to a PhD, it offers more variety of work, more collaboration, and more freedom in design approach.
-                    However, for me important is that there is still space for my critical- philosophical attitude, and
-                    room
-                    for questioning and research.
-                    I am therefore going to look for a visionary company, working on installations and pioneering
-                    projects,
-                    that has a culture that encourages growth, exploration and collaboration. Examples of this are
-                    studios
-                    like Falkland Studio, Fiction Factory, and Designwolf.
-
-                    In the far future, I might even start a small design (research) studio myself. I think this offers
-                    the
-                    opportunity to have full ownership in company vision, while staying close to content as well.
-                    However,
-                    before I feel comfortable doing this, I want to have developed enough specialized skills, a big
-                    enough
-                    network, and partnerships that want to take this challenge with me.
-
-                    Having learned how important traveling and following ambitions also are for my personal (&
-                    professional!) development, I want to travel before fully committing to a professional career.
-                    I want to explore southern and eastern Europe by bike: connecting with nature and my surroundings,
-                    using
-                    only my own strength and a very small collection of possessions to get around. For me the challenge
-                    here
-                    lies mostly in learning to live small, and needing to connect with the environment and locals to
-                    find my
-                    way, meet new people, and have a place to stay.
-                </p>
+                </div>
 
             </div>
 
@@ -1128,7 +1350,36 @@
             <a href="IMreport.pdf" class="filelinks">> Manifesto Report (Interactional Morality)</a>
 
             <h1 id="titlesources" class="title">References</h1>
-            <p id="textsources" class="normaltext">xxx</p>
+            <div id="textsources" class="normaltext">
+                <ol>
+                    <li>Andy Kirk. 2019. Data Visualisation: A Handbook for Data Driven Design. SAGE.</li>
+                    <li>Anthony Dunne and Fiona Raby. 2014. Speculative everything: design, fiction, and social dreaming. Choice Reviews Online
+                    51, 10: 51–5390. https://doi.org/10.5860/choice.51-5390</li>
+                    <li>Caroline Hummels, Ludger Van Dijk, Maarten Smith, and Technical University of Eindhoven. 2023. Matter of Transformation
+                    - introductory lecture.</li>
+                    <li>Ilpo Koskinen, John Zimmerman, Thomas Binder, Johan Redström, and Stephan Wensveen. 2011. Constructive Design research.
+                    In Elsevier eBooks. 1–13. https://doi.org/10.1016/b978-0-12-385502-2.00001-8</li>
+                    <li>J. W. Frens & C. J. Overbeeke. 2009. Setting the stage for the design of highly interactive systems. Proceedings of
+                    International Association of Societies of Design Research 2009 - IASDR’09 (pp. 1-10). Korean Society of Design Science.</li>
+                    <li>J. W. Frens. 2006. Designing for Rich Interaction: Integrating Form, Interaction, and Function. Unpublished Doctoral
+                    Dissertation, Eindhoven University of Technology, Eindhoven, the Netherlands. (retrievable from
+                    http://www.richinteraction.com)</li>
+                    <li>Minha Lee. 2021. Interactional Morality: Technology as Our Moral Mirror. Technische Universiteit Eindhoven. Retrieved
+                    from https://pure.tue.nl/ws/files/167867152/20210216_Lee.pdf</li>
+                    <li>MMID. 2024. Integrated Product Development Agency | MMID. MMID. Retrieved from https://mmid-group.com/</li>
+                    <li>Peter Lovei, Renee Noortman, and Mathias Funk. 2022. Introduction to Data-Enabled design. CHI Conference on Human
+                    Factors in Computing Systems Extended Abstracts. https://doi.org/10.1145/3491101.3503749</li>
+                    <li>Technologische Universiteit Eindhoven. 2023. DED course introduction.</li>
+                    <li>William James. 1907. Pragmatism, a new name for some old ways of thinking: Popular Lectures on Philosophy.</li>
+                    <li>Yaliang Chuang. 2021. Aesthetics of Intelligence by Prof. Stephan Wensveen on Oct. 8th, 2021. YouTube. Retrieved from
+                    https://www.youtube.com/watch?v=QyDnhibt2Bc</li>
+                    <li>Yi-Ching Janet Huang, Stephan A.G. Wensveen, and Mathias Funk. 2023. Experiential Speculation in Vision-Based AI Design
+                    Education: Designing Conventional and Progressive AI Futures. International Journal of Design.
+                    https://doi.org/10.57698/v17i2.01</li>
+                    <li>Yuval Noah Harari. 2015. Homo Deus: A Brief History of Tomorrow. Retrieved from http://cds.cern.ch/record/2319925</li>
+
+                </ol>
+            </div>
         </div>
 
     </div>
@@ -1144,6 +1395,10 @@
         home();
         var refslide = 1;
         var content1_open = false;
+
+        function closebox() {
+            popup.style.display = 'none';
+        }
 
         function home() {
             homebox.style.display = 'flex';
