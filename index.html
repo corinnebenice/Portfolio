@@ -35,32 +35,38 @@
 
         #popupbox {
             display: flex;
-            margin-top: 10%;
-            width: 500px;
-            height: 400px;
+            /* margin-top: 10%; */
+            width: 100%;
+            height: 100%;
             background-color: #363636;
             color: #ffffff;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
+            /* border-radius: 20px; */
             position: relative;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         #popuptext {
             flex-wrap: wrap;
             display: flex;
+            /* font-family: "Gloria Hallelujah", serif; */
+            /* font-size: 17px; */
             font-family: "Inter", serif;
             font-size: 15px;
             font-weight: 300;
-            width: 300px;
+            width: 500px;
+            margin-top: -50px;
             text-align: center;
             justify-content: center;
         }
 
         #closebutton {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            /* position: absolute; */
+            /* top: 10px;
+            right: 10px; */
+            margin-top: 50px;
             background-color: #363636;
             color: #ffffff;
         }
@@ -76,6 +82,7 @@
             position: relative;
             width: 100%;
             margin: 0;
+            padding: 0;
         }
 
         body::-webkit-scrollbar {
@@ -105,6 +112,7 @@
             font-family: "Lora", serif;
             font-style: normal;
             min-height: 100vh;
+            position: relative;
         }
 
         #menucontainer {
@@ -176,8 +184,15 @@
 
         #imgnikki {
             position: absolute;
+            display: flex;
+            /* width: 50vw; */
+            /* height: 50vh; */
             top: 8vh;
-            left: 2vh;
+            left: 2vw;
+        }
+        #imageme {
+            width: 50vw;
+            height: 50vh;
         }
 
         .title_smaller {
@@ -280,29 +295,51 @@
             transition: opacity 0.3s ease, visibility 0s;
         }
 
+        .hoverpages2 {
+            visibility: hidden;
+            display: block;
+            position: relative;
+            opacity: 0;
+            top: 0;
+            right: 5;
+            width: 90vw;
+            height: 100vh;
+            z-index: -1;
+            transition: opacity 0.3s ease, visibility 0s 0.3s;
+            justify-content: end;
+        }
+
         #notehome {
+            display: flex;
             position: absolute;
             top: 5vh;
-            left: 60%;
-            width: 60vb;
+            right: 20vw;
+            height: 20vh;
+            width: 20vw;
         }
         #noteaboutme {
             position: absolute;
+            display: flex;
             top: 5vh;
-            left: 65%;
-            width: 60vb;
+            right: 12vw;
+            height: 20vh;
+            width: 20vw;
         }
         #notedevelopment {
             position: absolute;
+            display: flex;
             top: 5vh;
-            left: 67%;
-            width: 60vb;
+            right: 4vw;
+            height: 20vh;
+            width: 20vw;
+            text-align: center;
         }
         #notefiles {
             position: absolute;
+            display: flex;
             top: 5vh;
-            left: 70%;
-            width: 60vb;
+            height: 20vh;
+            width: 20vw;
         }
 
 
@@ -365,16 +402,20 @@
             transition: opacity 0.3s ease, visibility 0s;
         }
 
+        #imgidentity {
+            width: 90vw;
+        }
+
         #imgbuild {
             position: absolute;
-            top: 150%;
+            top: 100%;
             left: 20%;
         }
 
         #imgelf {
             position: absolute;
-            top: 110%;
-            left: 100%;
+            top: 100%;
+            left: 60%;
         }
 
         #referencecontainer {
@@ -476,9 +517,10 @@
 
         #filesbox {
             align-items: flex-end;
-            margin-left: 70vb;
+            /* margin-left: 70vw; */
+            margin-right: 50px;
             display: flex;
-            /* align-items: center; */
+            align-items: center;
             flex-wrap: wrap;
             flex-direction: column;
             margin-bottom: 200px;
@@ -486,10 +528,6 @@
 
         #titlesources {
             margin-top: 100px;
-        }
-
-        #textsources {
-            text-align: end;
         }
 
 
@@ -555,88 +593,106 @@
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-            /* Smooth transition */
         }
-                #project1:hover~#textp1  {
+        #project1:hover~#textp1  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
         #project2:hover~#textp2  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
         #project3:hover~#textp3  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
         #project4:hover~#textp4  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project5:hover~#textp5  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project6:hover~#textp6  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project7:hover~#textp7  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project8:hover~#textp8  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project9:hover~#textp9  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project10:hover~#textp10  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project11:hover~#textp11  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                 #project12:hover~#textp12  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
                         #project13:hover~#textp13  {
             visibility: visible;
             opacity: 1;
             max-height: 400px;
             transition: max-height 0.5s ease;
+            padding-bottom: 40px;
         }
 
-        /* #project3:hover~#p3 {
+        #project2:hover~#p2 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+
+        #project3:hover~#p3 {
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
@@ -694,7 +750,13 @@
             visibility: visible;
             opacity: 1;
             transition: opacity 0.3s ease, visibility 0s;
-        } */
+        }
+
+        #project13:hover~#p13 {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
 
         .hoverpages {
             visibility: hidden;
@@ -703,53 +765,254 @@
             opacity: 0;
             top: 0;
             left: 0;
-            width: 100vh;
+            width: 98vw;
             height: 100vh;
             z-index: -1;
             transition: opacity 0.3s ease, visibility 0s 0.3s;
         }
 
-        #img1 {
+        #img11 {
             position: absolute;
-            top: 10%;
-            left: 20%;
+            top: 50vh;
+            left: 10vw;
+        }
+        #img12 {
+            position: absolute;
+            top: 80vh;
+            left: 2vw;
+        }
+        #img13 {
+            position: absolute;
+            top: 40vh;
+            left: 75vw;
+        }
+        #img14 {
+            position: absolute;
+            top: 110vh;
+            left: 80vw;
         }
 
-        #img2 {
+        #img21 {
             position: absolute;
-            top: 30%;
-            left: 10%;
+            top: 60vh;
+            left: 75vw;
+        }
+        #img22 {
+            position: absolute;
+            top: 90vh;
+            left: 75vw;
+        }
+        #img23 {
+            position: absolute;
+            top: 70vh;
+            left: 8vw;
+        }
+        
+        #img33 {
+            position: absolute;
+            top: 70vh;
+            left: 78vw;
+        }
+        #img32 {
+            position: absolute;
+            top: 110vh;
+            left: 75vw;
+        }
+        #img31 {
+            position: absolute;
+            top: 75vh;
+            left: 3vw;
+        }
+        #img34 {
+            position: absolute;
+            top: 110vh;
+            left: 6vw;
         }
 
-        #img3 {
+        #img41 {
             position: absolute;
-            top: 16%;
-            left: 80%;
+            top: 70vh;
+            left: 78vw;
+        }
+        #img42 {
+            position: absolute;
+            top: 95vh;
+            left: 75vw;
+        }
+        #img43 {
+            position: absolute;
+            top: 60vh;
+            left: 3vw;
+        }
+        #img44 {
+            position: absolute;
+            top: 120vh;
+            left: 6vw;
         }
 
-        #img4 {
+        #img61 {
             position: absolute;
-            top: 60%;
-            left: 85%;
+            top: 83vh;
+            left: 80vw;
+        }
+        #img62 {
+            position: absolute;
+            top: 100vh;
+            left: 73vw;
+        }
+        #img63 {
+            position: absolute;
+            top: 90vh;
+            left: 3vw;
+        }
+        #img64 {
+            position: absolute;
+            top: 125vh;
+            left: 3vw;
         }
 
-        #img5 {
+        #img71 {
             position: absolute;
-            top: 60%;
-            left: 90%;
+            top: 100vh;
+            left: 80vw;
+        }
+        #img72 {
+            position: absolute;
+            top: 140vh;
+            left: 75vw;
+        }
+        #img73 {
+            position: absolute;
+            top: 100vh;
+            left: 4vw;
+        }
+        #img74 {
+            position: absolute;
+            top: 150vh;
+            left: 3vw;
         }
 
-        #img6 {
+        #img81 {
             position: absolute;
-            top: 60%;
-            left: 75%;
+            top: 120vh;
+            left: 77vw;
+        }
+        #img82 {
+            position: absolute;
+            top: 155vh;
+            left: 75vw;
+        }
+        #img83 {
+            position: absolute;
+            top: 110vh;
+            left: 4vw;
+        }
+        #img84 {
+            position: absolute;
+            top: 150vh;
+            left: 3vw;
         }
 
-        #img7 {
+        #img91 {
             position: absolute;
-            top: 60%;
-            left: 75%;
+            top: 120vh;
+            left: 77vw;
         }
+        #img92 {
+            position: absolute;
+            top: 155vh;
+            left: 75vw;
+        }
+        #img93 {
+            position: absolute;
+            top: 110vh;
+            left: 4vw;
+        }
+
+        #img101 {
+            position: absolute;
+            top: 120vh;
+            left: 76vw;
+        }
+        #img102 {
+            position: absolute;
+            top: 155vh;
+            left: 78vw;
+        }
+        #img103 {
+            position: absolute;
+            top: 110vh;
+            left: 4vw;
+        }
+        #img104 {
+            position: absolute;
+            top: 150vh;
+            left: 3vw;
+        }
+
+        #img111 {
+            position: absolute;
+            top: 140vh;
+            left: 76vw;
+        }
+        #img112 {
+            position: absolute;
+            top: 175vh;
+            left: 78vw;
+        }
+        #img113 {
+            position: absolute;
+            top: 140vh;
+            left: 4vw;
+        }
+        #img114 {
+            position: absolute;
+            top: 165vh;
+            left: 3vw;
+        }
+
+        #img121 {
+            position: absolute;
+            top: 140vh;
+            left: 76vw;
+        }
+        #img124 {
+            position: absolute;
+            top: 195vh;
+            left: 75vw;
+        }
+        #img123 {
+            position: absolute;
+            top: 140vh;
+            left: 3vw;
+        }
+        #img122 {
+            position: absolute;
+            top: 165vh;
+            left: 3vw;
+        }
+
+        #img131 {
+            position: absolute;
+            top: 150vh;
+            left: 76vw;
+        }
+        #img132 {
+            position: absolute;
+            top: 195vh;
+            left: 76vw;
+        }
+        #img133 {
+            position: absolute;
+            top: 150vh;
+            left: 3vw;
+        }
+        #img134 {
+            position: absolute;
+            top: 195vh;
+            left: 3vw;
+        }
+
     </style>
 </head>
 
@@ -764,10 +1027,10 @@
             <button class="menu" id="button1" onclick="aboutme()">ABOUT ME</button>
             <button class="menu" id="button2" onclick="development()">DEVELOPMENT</button>
             <button class="menu" id="button3" onclick="files()">FILES AND REFERENCES</button>
-            <div id="notehome" class="hoverpages"><p class="notetext">Welcome to my portfolio!</p></div>
-            <div id="noteaboutme" class="hoverpages"><p class="notetext">Read about what designer I am (PIV)</p></div>
-            <div id="notedevelopment" class="hoverpages"><p class="notetext">Here I write about my development trajectory; my goals & what I did (past), how I work (present), and my next plans (future).</p></div>
-            <div id="notefiles" class="hoverpages"><p class="notetext">Here you can find the references of the text, and the relevant deliverables and files of my work if you want to have a more detailed look.</p></div>    
+            <div id="notehome" class="hoverpages2"><p class="notetext">Welcome to my portfolio!</p></div>
+            <div id="noteaboutme" class="hoverpages2"><p class="notetext">Read about what designer I am (PIV)</p></div>
+            <div id="notedevelopment" class="hoverpages2"><p class="notetext">Here I write about my development trajectory; my goals & what I did (past), how I work (present), and my next plans (future).</p></div>
+            <div id="notefiles" class="hoverpages2"><p class="notetext">Here you can find the references of the text, and the relevant deliverables and files of my work if you want to have a more detailed look.</p></div>    
         </div>
     </div>
 
@@ -777,7 +1040,7 @@
             <p>Dear visitor, </p> <p>I designed and coded this portfolio myself from scratch. To experience the webpage as I intended, please
             visit the website through a laptop or computer (not a phone or tablet). Thank you deerly.</p>
             <p>Cheers, Nikki</p></div>
-            <button id="closebutton" onclick="closebox()">x</button>
+            <button id="closebutton" onclick="closebox()"><u><i>Proceed to the website</u></i></button>
         </div>
         
     </div>
@@ -987,13 +1250,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                         collect and control data during a remote deployment. Furthermore it shows how I design with and for the user and how I
                                         apply explorative research techniques to make a societal statement in the forms of a manifesto.</p>
                                     
-                                        <p class="small_text">Acknowledgements: Clever°Franke</p>
+                                        <p class="normaltext">Acknowledgements: Clever°Franke</p>
                                     </div>
                 <div id="p1" class="hoverpages">
-                    <img id="img1" src="FMP1.JPG" width="200px">
-                    <img id="img2" src="FMP2.JPG" width="300px">
-                    <img id="img3" src="FMP3.JPG" width="300px">
-                    <img id="img4" src="FMP4.JPG" width="250px">
+                    <img id="img11" src="FMP1.JPG" width="200px">
+                    <img id="img12" src="FMP2.JPG" width="300px">
+                    <img id="img13" src="FMP3.JPG" width="300px">
+                    <img id="img14" src="FMP4.JPG" width="250px">
                 </div>
 
                 <hr width="100%" style="margin: 0%;">
@@ -1010,12 +1273,12 @@ to get a feel for the application and value of my skills in a real-industry sett
                         in my FMP. It established a familiarity with integrating DataFoundry and using OOCSI, making me more easily apply these
                         tools in other projects. This allowed me to come closer to my desired identity as designer; becoming a data designer
                         that integrates data science in her process.                         </p>
-                        <p class="small_text">Acknowledgements: Niels Winkelman, Naixin Liu, Latisha Boor</p>
+                        <p class="normaltext">Acknowledgements: Niels Winkelman, Naixin Liu, Latisha Boor</p>
                     </div>
                 <div id="p2" class="hoverpages">
-                    <embed id="img5" src="DED1.pdf" type="application/pdf" width="200px" />
-                    <embed id="img6" src="DED2.pdf" type="application/pdf" width="200px" />
-                    <embed id="img7" src="DED3.pdf" type="application/pdf" width="200px" />
+                    <img id="img21" src="DED1.jpg" width="350px" />
+                    <img id="img22" src="DED2.jpg" width="300px" />
+                    <img id="img23" src="DED3.jpg" width="200px" />
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project3" class="projectlist title_smaller">Design for Guests - Matters of Transformation (MoT)</h3>
@@ -1033,10 +1296,10 @@ to get a feel for the application and value of my skills in a real-industry sett
                                        
                                     </div>
                 <div id="p3" class="hoverpages">
-                    <img id="img1a" src="FMP1.JPG" width="200px">
-                    <img id="img2a" src="FMP2.JPG" width="300px">
-                    <img id="img3a" src="FMP3.JPG" width="300px">
-                    <img id="img4a" src="FMP4.JPG" width="250px">
+                    <img id="img31" src="MOT1.JPG" width="300px">
+                    <img id="img32" src="MOT2.JPG" width="300px">
+                    <img id="img33" src="MOT3.JPG" width="300px">
+                    <img id="img34" src="MOT4.JPG" width="300px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project4" class="projectlist title_smaller">M2.1 - An Exploration of the World’s Forests through Data Visualization - CLEVER°FRANKE</h3>
@@ -1053,13 +1316,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                         attributes can express qualities. This brought me closer to my goal of combining MDC and CA.
 
                                                         </p>
-                                                    <p class="small_text">Acknowledgements: Clever°Franke</p>
+                                                    <p class="normaltext">Acknowledgements: Clever°Franke</p>
                                                     </div>
                 <div id="p4" class="hoverpages">
-                    <img id="img1b" src="FMP1.JPG" width="200px">
-                    <img id="img2b" src="FMP2.JPG" width="300px">
-                    <img id="img3b" src="FMP3.JPG" width="300px">
-                    <img id="img4b" src="FMP4.JPG" width="250px">
+                    <img id="img41" src="M2-1.jpg" width="300px">
+                    <img id="img42" src="M2-2.JPG" width="300px">
+                    <img id="img43" src="M2-3.JPG" width="250px">
+                    <img id="img44" src="M2-4.JPG" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project5" class="projectlist title_smaller">What gets counted counts - Let’s Make Humans Better: Enhancement, Technology & Transhumanism</h3>
@@ -1074,12 +1337,12 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                         better at analysing these complexities taking a position within.</p>
                                                      
                                                     </div>
-                <div id="p5" class="hoverpages">
-                    <img id="img1c" src="FMP1.JPG" width="200px">
-                    <img id="img2c" src="FMP2.JPG" width="300px">
-                    <img id="img3c" src="FMP3.JPG" width="300px">
-                    <img id="img4c" src="FMP4.JPG" width="250px">
-                </div>
+                <!-- <div id="p5" class="hoverpages">
+                    <img id="img51" src="FMP1.JPG" width="200px">
+                    <img id="img52" src="FMP2.JPG" width="300px">
+                    <img id="img53" src="FMP3.JPG" width="300px">
+                    <img id="img54" src="FMP4.JPG" width="250px">
+                </div> -->
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project6" class="projectlist title_smaller">M1.2 - Speculative Design Research; a First Inquiry</h3>
                                                     <div id="textp6" class="projecttext">
@@ -1094,10 +1357,10 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                     
                                                     </div>
                 <div id="p6" class="hoverpages">
-                    <img id="img1d" src="FMP1.JPG" width="200px">
-                    <img id="img2d" src="FMP2.JPG" width="300px">
-                    <img id="img3d" src="FMP3.JPG" width="300px">
-                    <img id="img4d" src="FMP4.JPG" width="250px">
+                    <img id="img61" src="M1-2.png" width="300px">
+                    <img id="img62" src="M1-1.png" width="300px">
+                    <img id="img63" src="M1-3.JPG" width="300px">
+                    <img id="img64" src="M1-4.JPG" width="300px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project7" class="projectlist title_smaller">M1.1 - Track.(ID)</h3>
@@ -1111,16 +1374,16 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                         throughout the design process.</p>
                                                         <p class="normaltext">The development of these skills gave me a toolset that helped me apply DED principles in later projects more easily,
                                                         therefore allowing MDC to be more integrated in my work.</p>
-                                                    <p class="small_text">Acknowledgements: Jelmer Braamskamp, Maas Goudswaard, Leqi Wang</p>
+                                                    <p class="normaltext">Acknowledgements: Jelmer Braamskamp, Maas Goudswaard, Leqi Wang</p>
                                                     </div>
                 <div id="p7" class="hoverpages">
-                    <img id="img1e" src="FMP1.JPG" width="200px">
-                    <img id="img2e" src="FMP2.JPG" width="300px">
-                    <img id="img3e" src="FMP3.JPG" width="300px">
-                    <img id="img4e" src="FMP4.JPG" width="250px">
+                    <img id="img71" src="trackid1.JPG" width="250px">
+                    <img id="img72" src="trackid2.jpg" width="300px">
+                    <img id="img73" src="trackid3.png" width="250px">
+                    <img id="img74" src="trackid4.png" width="300px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
-                <h3 id="project8" class="projectlist title_smaller">Eindhoven, Grow up! - Interactional Morality</h3>
+                <h3 id="project8" class="projectlist title_smaller">"My data does not represent me" - Interactional Morality</h3>
                                                                     <div id="textp8" class="projecttext">
                                                                         <p class="normaltext">This course covered the meaning of morality both individually and at societal level, using the format of a manifesto to
                                                                         critically assess future-oriented and current scenarios of our intimate relationships with technology. This resulted in
@@ -1130,13 +1393,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                                         experiences to provoke and share criticality.</p>
                                                                         <p class="normaltext">The development of these skills allowed me to do projects within the speculative and criticizing realm, by being able to
                                                                         position myself societally, and design the experiences to create the emotional response I intended it to.</p>
-                                                                        <p class="small_text">Acknowledgements: Floris Beekman, Nicolaas Romagnoli, Rosa van Wershoven, Wenhao Yu</p>
+                                                                        <p class="normaltext">Acknowledgements: Floris Beekman, Nicolaas Romagnoli, Rosa van Wershoven, Wenhao Yu</p>
                                                                     </div>
                 <div id="p8" class="hoverpages">
-                    <img id="img1f" src="FMP1.JPG" width="200px">
-                    <img id="img2f" src="FMP2.JPG" width="300px">
-                    <img id="img3f" src="FMP3.JPG" width="300px">
-                    <img id="img4f" src="FMP4.JPG" width="250px">
+                    <img id="img81" src="morality1.jpg" width="300px">
+                    <img id="img82" src="morality2.png" width="300px">
+                    <img id="img83" src="morality3.png" width="300px">
+                    <img id="img84" src="morality4.png" width="250px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project9" class="projectlist title_smaller">Mirroring the Data - Constructive Design Research (CDR)</h3>
@@ -1148,13 +1411,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                                                         analysis and visualization in Jupyter.</p>
                                                                                         <p class="normaltext">The development of these skills made it more and more natural to integrate user involvement in my projects, by being
                                                                                         very familiar with the necessary tools and methodologies.</p>
-                                                                                        <p class="small_text">Acknowledgements: Dana Starmans, Pauline Vaandrager</p>
+                                                                                        <p class="normaltext">Acknowledgements: Dana Starmans, Pauline Vaandrager</p>
                                                                                     </div>
                 <div id="p9" class="hoverpages">
-                    <img id="img1g" src="FMP1.JPG" width="200px">
-                    <img id="img2g" src="FMP2.JPG" width="300px">
-                    <img id="img3g" src="FMP3.JPG" width="300px">
-                    <img id="img4g" src="FMP4.JPG" width="250px">
+                    <img id="img91" src="CDR1.jpg" width="300px">
+                    <img id="img92" src="CDR2.jpg" width="300px">
+                    <img id="img93" src="CDR3.jpg" width="280px">
+                    <!-- <img id="img94" src="FMP4.JPG" width="250px"> -->
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project10" class="projectlist title_smaller">JamBlocks - Designerly perspective on IoT</h3>
@@ -1169,13 +1432,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                                                         <p class="normaltext">The development of these skills helped me become a better prototyper, seeking more complex qualities of interaction and
                                                                                         manifestation of values within form and features. This brought me closer to becoming the designer I describe in my
                                                                                         vision, as it gave me more skills in designing experiences and prototypes that can provoke and tell stories.</p>
-                                                                                        <p class="small_text">Acknowledgements: Teun Schutten, Hongbin Su</p>
+                                                                                        <p class="normaltext">Acknowledgements: Teun Schutten, Hongbin Su</p>
                                                                                     </div>
                 <div id="p10" class="hoverpages">
-                    <img id="img1h" src="FMP1.JPG" width="200px">
-                    <img id="img2h" src="FMP2.JPG" width="300px">
-                    <img id="img3h" src="FMP3.JPG" width="300px">
-                    <img id="img4h" src="FMP4.JPG" width="250px">
+                    <img id="img101" src="IOT1.jpg" width="300px">
+                    <img id="img102" src="IOT2.JPG" width="300px">
+                    <img id="img103" src="‭IOT3.jpg" width="300px">
+                    <img id="img104" src="IOT4.png" width="300px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project11" class="projectlist title_smaller">Shapeshift - Creativity & Aesthetics of Data & AI</h3>
@@ -1191,13 +1454,13 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                                                         <p class="normaltext">The development of these skills are directly linked to my learning intentions within my masters and contributed to
                                                                                         finding my vision and giving me frameworks and theories (e.g. aesthetics of intelligence [12]) that enabled me to apply
                                                                                         it within my projects.</p>
-                                                                                        <p class="small_text">Acknowledgements: Mats Erdkamp, Joris Lodewijks, Davide Stefani, Thijs de Koning</p>
+                                                                                        <p class="normaltext">Acknowledgements: Mats Erdkamp, Joris Lodewijks, Davide Stefani, Thijs de Koning</p>
                                                                                     </div>
                 <div id="p11" class="hoverpages">
-                    <img id="img1i" src="FMP1.JPG" width="200px">
-                    <img id="img2i" src="FMP2.JPG" width="300px">
-                    <img id="img3i" src="FMP3.JPG" width="300px">
-                    <img id="img4i" src="FMP4.JPG" width="250px">
+                    <img id="img111" src="shapeshift1.png" width="300px">
+                    <img id="img112" src="shapeshift2.png" width="300px">
+                    <img id="img113" src="shapeshift3.png" width="300px">
+                    <img id="img114" src="shapeshift4.png" width="300px">
                 </div>
                 <hr width="100%" style="margin: 0%;">
                 <h3 id="project12" class="projectlist title_smaller">Final Bachelor Project - Calmellia Sensis (FBP)</h3>
@@ -1217,11 +1480,11 @@ to get a feel for the application and value of my skills in a real-industry sett
                                                                                         focusing on the aesthetics of interactions and expressions of movement.</p>
                                                                                         
                                                                                     </div>
-                <div id="p2" class="hoverpages">
-                    <img id="img1j" src="FMP1.JPG" width="200px">
-                    <img id="img2j" src="FMP2.JPG" width="300px">
-                    <img id="img3j" src="FMP3.JPG" width="300px">
-                    <img id="img4j" src="FMP4.JPG" width="250px">
+                <div id="p12" class="hoverpages">
+                    <img id="img121" src="sensis1.PNG" width="200px">
+                    <img id="img122" src="sensis2.png" width="300px">
+                    <img id="img123" src="sensis3.png" width="300px">
+                    <img id="img124" src="sensis4.png" width="300px">
                 </div>
                 
                 <hr width="100%" style="margin: 0%;">
@@ -1236,14 +1499,14 @@ to get a feel for the application and value of my skills in a real-industry sett
                                     The development of this skill allowed me to see and apply coding tools as more than realization tools, directly applying
                                     C&A within MDC practices and tools.
                                     </p>
-                                    <p class="small_text">Acknowledgements; Clever°Franke, Bart Simons, Francesca Bonin</p>
+                                    <p class="normaltext">Acknowledgements; Clever°Franke, Bart Simons, Francesca Bonin</p>
                                 
                                 </div>
-                                <div id="p2" class="hoverpages">
-                                    <img id="img1j" src="FMP1.JPG" width="200px">
-                                    <img id="img2j" src="FMP2.JPG" width="300px">
-                                    <img id="img3j" src="FMP3.JPG" width="300px">
-                                    <img id="img4j" src="FMP4.JPG" width="250px">
+                                <div id="p13" class="hoverpages">
+                                    <img id="img131" src="creativecode1.jpg" width="300px">
+                                    <img id="img132" src="creativecode2.jpg" width="300px">
+                                    <img id="img133" src="creativecode3.png" width="200px">
+                                    <img id="img134" src="creativecode4.png" width="200px">
                                 </div>
 
                 <h2 class="normaltext"></h2>
@@ -1392,15 +1655,17 @@ to get a feel for the application and value of my skills in a real-industry sett
 
 
     <script>
-        home();
         var refslide = 1;
         var content1_open = false;
 
         function closebox() {
             popup.style.display = 'none';
+            banner.style.display = 'none';
+            home();
         }
 
         function home() {
+            banner.style.display = 'flex';
             homebox.style.display = 'flex';
             aboutmebox.style.display = 'none';
             developmentbox.style.display = 'none';
